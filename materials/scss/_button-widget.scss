@@ -2,7 +2,12 @@
 .button-widget {
   display: flex;
   flex-direction: column;
+  align-items: start;
   margin: 4px;
+
+  button:has(> .text-widget) {
+    width: 100%;
+  }
 
   button > .text-widget {
     margin-bottom: unset;
@@ -16,6 +21,7 @@
     background: unset;
     border: unset;
     box-shadow: unset;
+    align-self: center;
 
     & > * {
       margin: unset !important;

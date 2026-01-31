@@ -44,6 +44,8 @@
                 </button>
             </form>
         </li>
+        <#if hasErrors >
+            <span id="error-message" class="error-message ml-3 align-self-center">Some pages have errors.</span>
+        </#if>
     </ul>
-
 </div>

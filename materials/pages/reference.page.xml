@@ -11736,6 +11736,25 @@
                         </text>
                     </cell>
                 </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>hasErrors</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>Indicates if any widgets have errors within the pagination widget. The widget that
+                                has the error may be on a page that is not visible.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
