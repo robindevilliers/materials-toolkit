@@ -87,4 +87,16 @@ $(function () {
             }
         });
     });
+
+    $('.currency-field').keypress(function (event) {
+        const val = event.target.value;
+        const index = val.indexOf(".");
+        if (index > -1) {
+            const decimals = val.substring(index + 1);
+            if (decimals.length > 1) {
+                return false;
+            }
+        }
+        return true;
+    });
 })

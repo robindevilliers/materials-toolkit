@@ -73,7 +73,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">${currencySymbol}</span>
                 </div>
-                <input id="${id}" class="form-control ${sizeCls} validate" type="number" step="0.01"
+                <input id="${id}" class="form-control ${sizeCls} validate currency-field" type="number" step="0.01"
                         name="${name}" value="${value!}" <#if disabled??>disabled</#if>
                 />
             </div>
