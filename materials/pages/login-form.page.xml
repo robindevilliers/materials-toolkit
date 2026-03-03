@@ -3,7 +3,7 @@
     <div v="v1" orientation="COLUMN">
         <div v="v1" orientation="ROW" justifyContent="SPACE_AROUND">
             <div v="v1" orientation="COLUMN" justifyContent="SPACE_AROUND" alignItems="CENTER">
-                <login-panel columnWidth="6" v="v1"/>
+                <login-panel columnWidth="6" v="v1" disableUsername="true" disableRegistration="true"/>
             </div>
         </div>
     </div>

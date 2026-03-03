@@ -12,9 +12,12 @@
                     <div class="form-group">
                         <label for="loginPanelUsername" class="form-label label">Username</label>
                         <input type="text" name="username" class="form-control" id="loginPanelUsername"
-                                autocomplete="username" placeholder="">
+                                autocomplete="username" placeholder="" value="${(username)!}" <#if disableUsername>disabled</#if>>
                         <#if errors.username??>
                             <span class="error-message">${errors.username}</span>
+                        </#if>
+                        <#if disableUsername>
+                            <input type="hidden" name="username" value="${(username)!}"/>
                         </#if>
                     </div>
                 </div>

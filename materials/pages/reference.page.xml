@@ -9478,8 +9478,61 @@
                 <textual>Widget</textual>
             </title>
             <text v="v1">
-                <textual>The Login Panel Widget is a Flex Item.</textual>
+                <textual>The Login Panel Widget is a Flex Item in addition to the following properrties.</textual>
             </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>disableUsername</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The disableUsername property specifies if the login panel username field should
+                                be disabled. It is still necessary to submit a valid username when the input field is
+                                disabled, which normally means that a substituted hidden field should be present.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>disableRegistration</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The disableRegistration property will hide the registration button on the login
+                                panel. If set to true, the button is hidden. If set to false, then the setting from
+                                the account settings will take effect.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
             <title size="SMALLER" v="v1">
                 <textual>Template</textual>
             </title>
@@ -9499,6 +9552,26 @@
                         <textual>Type</textual>
                     </column>
                 </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>acceptPrivacyPolicy</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The acceptPrivacyPolicy token is used to prepopulate the value of the
+                                acceptPrivacyPolicy field.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+
                 <row>
                     <cell>
                         <text v="v1">
@@ -9568,6 +9641,25 @@
                     <cell>
                         <text v="v1">
                             <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>disableUsername</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The disableUsername token is used to indicate that the username input should be
+                                disabled.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
                         </text>
                     </cell>
                 </row>
@@ -9662,6 +9754,24 @@
                     <cell>
                         <text v="v1">
                             <textual>map&lt;string, string&gt;</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>username</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The username token is used to prepopulate the value of the username field.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>
