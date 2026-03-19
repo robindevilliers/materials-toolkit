@@ -1,0 +1,93 @@
+
+.kase-tray-widget {
+  padding: 5px;
+
+  .panel-body {
+    background-color: theme-color("primary") !important;
+  }
+
+  .kase-tray-body {
+    .panel-item:hover {
+      background-color: theme-color("primary") !important;
+      color: color-yiq(theme-color("primary")) !important;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+
+    .kase-tray-button {
+      background-color: inherit;
+      display: flex;
+      cursor: pointer;
+      transition: background-color .2s ease-out;
+      flex-direction: column;
+      text-transform: unset;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .5px;
+      font-size: 14px;
+      outline: 0;
+      border: none;
+      border-radius: 10px;
+      line-height: 36px;
+      vertical-align: middle;
+      -webkit-tap-highlight-color: transparent;
+      max-width: unset;
+      color: inherit;
+    }
+  }
+
+  .kase-tray-footer {
+    display: flex;
+    justify-content: center;
+    min-height: 66px;
+  }
+
+  .kase-tray-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .kase-tray-wizard-title {
+      font-size: 1.25em;
+      font-family: $font-title-primary;
+    }
+
+    .kase-tray-description {
+      margin: 0 1em;
+      letter-spacing: initial;
+      line-height: initial;
+      font-family: $font-text;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: unset;
+      font-style: normal;
+    }
+
+    .kase-tray-workflow-title {
+      align-self: flex-end;
+    }
+
+    .kase-tray-workflow-description {
+      align-self: flex-end;
+      font-family: $font-text;
+    }
+
+    .kase-tray-principal {
+      align-self: flex-end;
+    }
+
+    & > *:first-child {
+      margin-right: 1em;
+    }
+  }
+
+  .kase-tray-button-line {
+    display: flex;
+    padding: 1em;
+    justify-content: flex-end;
+  }
+}

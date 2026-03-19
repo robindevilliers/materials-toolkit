@@ -8,9 +8,9 @@ import ClassManager from '../ClassManager';
 import RenderingEngine from '../RenderingEngine';
 import { RenderError } from '../RenderError';
 
-export default class TrayRenderer implements Renderer {
+export default class KaseTrayRenderer implements Renderer {
     accept(name: string): boolean {
-        return name === 'tray';
+        return name === 'kase-tray';
     }
 
     render(element: Element, classMappings: Properties, renderingEngine: RenderingEngine): string {
@@ -23,20 +23,17 @@ export default class TrayRenderer implements Renderer {
 
         const header = children.find(el => el.name === "header");
 
-        const values = Store.getMessages().map(m => {
-
-                const [wizardName, wizardVersion] = m.getWizardId().split(":");
-                const wizard = Store.getWizards().find(w => w.getName() === wizardName && w.getVersion() === wizardVersion);
+        console.log(Store.getKases());
+        const values = Store.getKases().map(m => {
 
                 const [workflowGroup, workflowName, workflowVersion] = m.getWorkflowId().split(":");
-                const workflow = Store.getWorkflows().find(w => w.getGroup() === workflowGroup && w.getName() === workflowName && w.getVersion() === workflowVersion);
+                const workflow = Store.getWorkflows().find(w => w.getGroup() === workflowGroup && w.getName() === workflowName &&
+                    w.getVersion() === workflowVersion);
 
                 return {
-                    action: "/workflow/continue-case/" + m.getWipId(),
-                    wipId: m.getWipId(),
-                    wizardId: m.getWizardId(),
-                    wizardTitle: wizard?.getTitle(),
-                    wizardDescription: wizard?.getDescription(),
+                    id: generateId(),
+                    action: "/operation/kase-tray-open-kase",
+                    kaseId: generateId(),
                     workflowId: m.getWorkflowId(),
                     workflowTitle: workflow?.getTitle(),
                     workflowDescription: workflow?.getDescription(),
@@ -55,14 +52,17 @@ export default class TrayRenderer implements Renderer {
         data.values = values;
         data.trayId = generateId();
         data.source = "";
-        data.action = "/operation/open-tray";
+        data.action = "#" + generateId();
+        data.parameters = {};
         data.testMode = Store.isTestContext();
+        data.disablePrevious = false;
+        data.disableNext = false;
 
         const classManager = new ClassManager(classMappings);
         flexItemSupport(data, classManager, element.attributes);
         data.classes = classManager.toString();
         data.testMode = Store.isTestContext();
 
-        return renderingEngine.render('tray.ftl', data);
+        return renderingEngine.render('kase-tray.ftl', data);
     }
 }

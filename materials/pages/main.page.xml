@@ -829,6 +829,13 @@
             </link>
         </list-item>
         <list-item>
+            <link type="page" page="reference.html#case-tray" v="v1">
+                <text v="v1">
+                    <textual>Case Tray</textual>
+                </text>
+            </link>
+        </list-item>
+        <list-item>
             <link type="page" page="reference.html#cancel-button" v="v1">
                 <text v="v1">
                     <textual>Cancel Button</textual>

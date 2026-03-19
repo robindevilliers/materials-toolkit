@@ -433,6 +433,29 @@
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
+                    <textual>Case Tray</textual>
+                </title>
+                <text v="v1" flexBasis="500px">
+                    <textual>
+                        The Case Tray widget presents a list of cases.  The widget is intended to display a limited set
+                        of cases that might relate to the current principal, or be for specific workflows that are
+                        reached a particular state (ie a result as been obtained).  It opens case pages when an item is
+                        selected.
+                    </textual>
+                </text>
+            </div>
+            <kase-tray queue="main-user" v="v1">
+                <header>
+                    <textual>Case Tray</textual>
+                </header>
+            </kase-tray>
+        </div>
+        <horizontal-rule/>
+        <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+            flexBasis="100%">
+            <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+                flexBasis="100%" width="100%">
+                <title size="LARGE" v="v1">
                     <textual>Folder</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
