@@ -1,12 +1,12 @@
 
-.tray-widget {
+.message-tray-widget {
   padding: 5px;
 
   .panel-body {
     background-color: theme-color("primary") !important;
   }
 
-  .tray-body {
+  .message-tray-body {
     .panel-item:hover {
       background-color: theme-color("primary") !important;
       color: color-yiq(theme-color("primary")) !important;
@@ -18,7 +18,7 @@
       justify-content: stretch;
     }
 
-    .tray-button {
+    .message-tray-button {
       background-color: inherit;
       display: flex;
       cursor: pointer;
@@ -40,17 +40,17 @@
     }
   }
 
-  .tray-line {
+  .message-tray-line {
     display: flex;
     width: 100%;
     justify-content: space-between;
 
-    .tray-wizard-title {
+    .message-tray-wizard-title {
       font-size: 1.25em;
       font-family: $font-title-primary;
     }
 
-    .tray-description {
+    .message-tray-description {
       margin: 0 1em;
       letter-spacing: initial;
       line-height: initial;
@@ -61,16 +61,16 @@
       font-style: normal;
     }
 
-    .tray-workflow-title {
+    .message-tray-workflow-title {
       align-self: flex-end;
     }
 
-    .tray-workflow-description {
+    .message-tray-workflow-description {
       align-self: flex-end;
       font-family: $font-text;
     }
 
-    .tray-principal {
+    .message-tray-principal {
       align-self: flex-end;
     }
 
@@ -79,7 +79,7 @@
     }
   }
 
-  .tray-button-line {
+  .message-tray-button-line {
     display: flex;
     padding: 1em;
     justify-content: flex-end;

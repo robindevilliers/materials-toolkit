@@ -410,22 +410,22 @@
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
-                    <textual>Tray</textual>
+                    <textual>Message Tray</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Tray widget presents a list of tray entries that are in the specified queue and that belongs
-                        to a compatible group with the current user. This widget is intended to display a limited set of
-                        tray entries which is what you will find as a member of the public or a customer or case
-                        principal. This widget is intended to be customer facing.
+                        The Message Tray widget presents a list of tray entries that are in the specified queue and that
+                        belongs to a compatible group with the current user. This widget is intended to display a
+                        limited set of tray entries which is what you will find as a member of the public or a customer
+                        or case principal. This widget is intended to be customer facing.
                     </textual>
                 </text>
             </div>
-            <tray queue="main-user" v="v1">
+            <message-tray queue="main-user" v="v1">
                 <header>
                     <textual>In Tray</textual>
                 </header>
-            </tray>
+            </message-tray>
         </div>
         <horizontal-rule/>
         <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
@@ -437,9 +437,9 @@
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Case Tray widget presents a list of cases.  The widget is intended to display a limited set
+                        The Case Tray widget presents a list of cases. The widget is intended to display a limited set
                         of cases that might relate to the current principal, or be for specific workflows that are
-                        reached a particular state (ie a result as been obtained).  It opens case pages when an item is
+                        reached a particular state (ie a result as been obtained). It opens case pages when an item is
                         selected.
                     </textual>
                 </text>

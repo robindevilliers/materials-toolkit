@@ -8,9 +8,9 @@ import ClassManager from '../ClassManager';
 import RenderingEngine from '../RenderingEngine';
 import { RenderError } from '../RenderError';
 
-export default class TrayRenderer implements Renderer {
+export default class MessageTrayRenderer implements Renderer {
     accept(name: string): boolean {
-        return name === 'tray';
+        return name === 'message-tray';
     }
 
     render(element: Element, classMappings: Properties, renderingEngine: RenderingEngine): string {
@@ -63,6 +63,6 @@ export default class TrayRenderer implements Renderer {
         data.classes = classManager.toString();
         data.testMode = Store.isTestContext();
 
-        return renderingEngine.render('tray.ftl', data);
+        return renderingEngine.render('message-tray.ftl', data);
     }
 }

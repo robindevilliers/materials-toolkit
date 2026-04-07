@@ -54,7 +54,7 @@ import MenuBrandRenderer from './MenuBrandRenderer';
 import MenuItemRenderer from './MenuItemRenderer';
 import SubMenuRenderer from './SubMenuRenderer';
 import SubMenuLabelRenderer from './SubMenuLabelRenderer';
-import TrayRenderer from './TrayRenderer';
+import MessageTrayRenderer from './MessageTrayRenderer';
 import HeaderRenderer from './HeaderRenderer';
 import FakeQueueRenderer from './FakeQueueRenderer';
 import MessageExplorerRenderer from './MessageExplorerRenderer';
@@ -143,7 +143,7 @@ const registry = [
     new MenuItemRenderer(),
     new SubMenuRenderer(),
     new SubMenuLabelRenderer(),
-    new TrayRenderer(),
+    new MessageTrayRenderer(),
     new HeaderRenderer(),
     new MessageExplorerRenderer(),
     new NotificationBannerRenderer(),
