@@ -68,14 +68,15 @@
     </div>
     <div v="v1" orientation="COLUMN">
         <title size="LARGER" v="v1">
-            <textual>Categories</textual>
+            <textual>Basis</textual>
         </title>
         <text v="v1">
-            <textual>This section outlines four categories that the rest of the widgets fall into. Any widget that
-                falls within these categories has all the associated properties for that category. For example, a
-                Textual Widget will have all the properties that a Textual has. It will be explicitly stated in the
-                widget&apos;s description which class the widget possesses. It is perfectly possible for a widget to
-                have more than one of these categories.
+            <textual>This section outlines the Basis that the rest of the widgets fall into. Think of the Basis as a
+                template or category or class that the widget extends or inherits off. All widgets that inherit off a
+                Basis have the attributes that the Basis defines. For example, a Textual Widget will have all the
+                properties that a Textual Basis has. It will be explicitly stated in the widget&apos;s description which
+                Basis the widget falls into, if any. It is perfectly possible for a widget to all into more than one
+                Basis.
             </textual>
         </text>
 
@@ -85,7 +86,7 @@
             </title>
             <text v="v1">
                 <textual>
-                    All Buttons extend off the Button Widget template outlined here, in addition to adding some
+                    All Buttons extend off the Button basis outlined here, in addition to adding some
                     additional properties of their own. And they all use the button.ftl template included in the
                     materials. How buttons are presented is determined by the content of the Button. If a Button
                     contains a Text widget, then the Button wil present as a normal button. If the Button contains,
@@ -97,8 +98,8 @@
                 <textual>Widget</textual>
             </title>
             <text v="v1">
-                <textual>The Button Widget is a Flex Item. And has the following additional properties. A Button is
-                    allows one and only one child of Paragraph, Icon, Image, or Card.
+                <textual>The Button Widget is a Flex Item. And has the following additional properties. A Button allows
+                    one and only one child of Paragraph, Icon, Image, or Card.
                 </textual>
             </text>
             <table v="v1">
@@ -628,10 +629,9 @@
                 <textual>Flex Item</textual>
             </title>
             <text v="v1">
-                <textual>Many widgets fall into the specific category of being a Flex Item. This kind of widget
-                    describes a widget that will be composed within a Flex Container. The combination of Flex Items and
-                    Flex Containers allows for a high degree of control over positioning of HTML elements within one
-                    another.
+                <textual>Many widgets have a Flex Item basis. This kind of widget describes a widget that will be
+                    composed within a Flex Container. The combination of Flex Items and Flex Containers allows for a
+                    high degree of control over positioning of HTML elements within one another.
                 </textual>
             </text>
             <text v="v1">
@@ -1674,6 +1674,460 @@
                     <cell>
                         <text v="v1">
                             <textual>NORMAL, BOLD, LIGHTER, BOLDER, INHERIT, INITIAL, UNSET</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+        <div v="v1" orientation="COLUMN">
+            <title id="textual" size="MEDIUM" v="v1">
+                <textual>Tray</textual>
+            </title>
+            <text v="v1">
+                <textual>Many widgets present text and have a common set of attributes that affect the styling
+                    of the text within. These widgets are collectively referred to as the Textuals. In addition to
+                    having presentation attributes, Textuals also compose specific elements related to text. These are
+                    Span, Br and Script. These elements are laid out in flowing order as you would expect text to be
+                    laid out in a paragraph. Elements are wrapped when space is constrained.
+                </textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>collapseFooter</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The collapseFooter attribute will indicate that the widget should not render the
+                                footer if there is only one page.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>customisePanel</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The customisePanel attribute will indicate that the widget should be configured
+                                with content, and that the content should be rendered for each panel that the widget
+                                renders. The panel should no longer be clickable, or execute any action.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>id</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The id of the widget. The id is used in pagination links so that the web page
+                                scrolls the widget into view when the links are clicked.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>pageSize</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The pageSize indicates the number of items that should be rendered per page. Any
+                                additional items will be grouped into pages of pageSize, and pagination links will be
+                                presented in the tray footer to allow navigation to those pages.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>number</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the defined by the widget and not the basis. It must take the
+                    following tokens.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>_checkpoint</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
+                                the form is submitted. In this way, if the form is submitted again, the same entities
+                                are generated and the operation backing the form becomes idempotent.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>_csrf</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The CSRF token for the form submit.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>action</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The action token contains the url for the action attribute for the form.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>url</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>bust</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The bust token contains a unique id for each render of the message-explorer. This
+                                helps to prevent any caching issues that affect the render, and also impacts how the
+                                page maintains focus on the widget as it is refreshed.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>classes</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A list of classes that should be applied.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>class list</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>collapseFooter</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The collapseFooter property indicates if the tray should not render the footer of
+                                the tray if there is only one page.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>containerStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Container
+                                definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>currentPage</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The currentPage property indicates the index of the currently selected page.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>number</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>customisePanel</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The customisePanel property indicates if the tray should render with customised
+                                content, or render the pre-canned content instead.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>header</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A header token contains the content for presenting the Tray Header.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>html</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>id</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A unique id for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>itemStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Item definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>nextPage</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The nextPage property indicates the index of the next page.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>number</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>offeredPages</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The offeredPages property is a list of page indexes that should be presented for
+                                pagination purposes.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>[1,2,3,4,5,6,7,8]</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>pageSize</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The pageSize property indicates the size of each page.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>number</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>previousPage</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The previousPage property indicates the index of the previous page.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>number</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>source</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The source value should be included in the form as a hidden field. It indicates
+                                the source page that the Message Tray is configured within.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>testMode</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The testMode token indicates if the widget should render in test mode, which
+                                typically disables any button or link clicks.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
                         </text>
                     </cell>
                 </row>
@@ -6589,368 +7043,6 @@
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
-            <title id="folder" size="MEDIUM" v="v1">
-                <textual>Folder</textual>
-            </title>
-            <text v="v1">
-                <textual>The Folder Widget presents the contents of a queue in a customisable form. The Folder is
-                    intended to be used by staff members who transfer messages or wizards into the folder from a
-                    clearing tray. The widget supports content in the same was as Div etc, and so the presenation of
-                    each item can be customised. Open and Transfer buttons can be added to the item panel.
-                </textual>
-            </text>
-            <text v="v1">
-                <textual>The Folder Widget can be viewed on the Style Guide Specials page.</textual>
-            </text>
-            <title size="SMALLER" v="v1">
-                <textual>Widget</textual>
-            </title>
-            <text v="v1">
-                <textual>The Folder Widget is a Flex Item in addition to the following properties.</textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Permitted values/Examples</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>queue</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The queue property specifies the queue that the Folder will
-                                retrieve messages for.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>processing</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>pageSize</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The pageSize property indicates the size of each page. It defaults to 20.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-            <title size="SMALLER" v="v1">
-                <textual>Template</textual>
-            </title>
-            <text v="v1">
-                <textual>The template for the widget is the folder.ftl file. It takes the following tokens.
-                </textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Type</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>id</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A unique id for the widget.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>header</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>Specifies the header content.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>html</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>bust</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The bust token contains a unique id for each render of the message-explorer. This
-                                helps to prevent any caching issues that affect the render, and also impacts how the
-                                page maintains focus on the widget as it is refreshed.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>action</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The action token contains the url for the action attribute for the form.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>url</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>values</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A list of items that holds the content for all the values the folder should
-                                display for the current page.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>[{
-                                workflowId: string,
-                                wipId: string,
-                                wizardId: string,
-                                html: string
-                                }}]
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>noContent</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The noContent property indicates if the widget has any data to present or not.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>true, false</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>pageSize</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The pageSize property indicates the size of each page.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>currentPage</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The currentPage property indicates the index of the currently selected page.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>previousPage</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The previousPage property indicates the index of the previous page.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>nextPage</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The nextPage property indicates the index of the next page.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>nextPage</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The nextPage property indicates the index of the next page.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>offeredPages</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The offeredPages property is a list of page indexes that should be presented for
-                                pagination purposes.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>[1,2,3,4,5,6,7,8]</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>classes</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A list of classes that should be applied.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>class list</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>itemStyles</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The css styles that should be applied in order to support Flex Item definitions.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>css</textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-        </div>
-        <div v="v1" orientation="COLUMN">
             <title id="form" size="MEDIUM" v="v1">
                 <textual>Form</textual>
             </title>
@@ -11253,12 +11345,13 @@
                 <textual>Message Tray</textual>
             </title>
             <text v="v1">
-                <textual>The Message Tray Widget is a special widget that displays Messages that represent Wizards for the
-                    current user to complete. When the Message Tray Widget is configured, a Queue is specified. When the Tray
-                    renders, the Platform will retrieve the Messages from the Queue and filter the messages according to
-                    the Groups that the current user possesses. The resulting Messages are displayed, and if the user
-                    clicks on one of them, the associated Wizard will load. The Message Tray Widget is intended to be used for
-                    public consumption as opposed to the Message Explorer, that does a similar job.
+                <textual>The Message Tray Widget is a special widget that displays Messages that represent Wizards for
+                    the current user to complete. When the Message Tray Widget is configured, a Queue is specified. When
+                    the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
+                    according to the Groups that the current user possesses. The resulting Messages are displayed, and
+                    if the user clicks on one of them, the associated Wizard will load. The Message Tray Widget is
+                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
+                    job.
                 </textual>
             </text>
             <text v="v1">
@@ -11268,7 +11361,9 @@
                 <textual>Widget</textual>
             </title>
             <text v="v1">
-                <textual>The Message Tray Widget is a Flex Item in addition to the following properties.</textual>
+                <textual>The Message Tray Widget is a Tray, and Flex Item and Flex Container in addition to the
+                    following properties.
+                </textual>
             </text>
             <table v="v1">
                 <row>
@@ -11285,84 +11380,13 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>queue</textual>
+                            <textual>page</textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The queue from which to extract messages.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>processing</textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-            <title size="SMALLER" v="v1">
-                <textual>Template</textual>
-            </title>
-            <text v="v1">
-                <textual>The template for the widget is the message-tray.ftl file. It takes the following tokens.</textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Type</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>id</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A unique id for the widget.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>header</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A header token contains the content for presenting the Tray Header.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>html</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
+                            <textual>The page id of a Wip Page that will be rendered when a panel is clicked. If
+                                customisePanel is true, then this attribute has no affect.
                             </textual>
                         </text>
                     </cell>
@@ -11375,12 +11399,12 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>_csrf</textual>
+                            <textual>queue</textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
+                            <textual>The queue from which to extract messages.</textual>
                         </text>
                     </cell>
                     <cell>
@@ -11389,22 +11413,26 @@
                         </text>
                     </cell>
                 </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the message-tray.ftl file. It takes the following tokens in
+                    addition to the tokens specified by the Tray basis.
+                </textual>
+            </text>
+            <table v="v1">
                 <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>classes</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A list of classes that should be applied.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>class list</textual>
-                        </text>
-                    </cell>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
                 </row>
                 <row>
                     <cell>
@@ -11459,80 +11487,6 @@
                                 <br/>
                                 }&gt;
                             </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>testMode</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The testMode token indicates if the widget should render in test mode, which
-                                typically disables any button or link clicks.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>itemStyles</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The css styles that should be applied in order to support Flex Item definitions.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>css</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>trayId</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The id of the tray widget.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>source</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The source value should be included in the form as a hidden field. It indicates
-                                the source page that the Message Tray is configured within.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>

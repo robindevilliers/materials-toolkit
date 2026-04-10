@@ -976,13 +976,6 @@
             </link>
         </list-item>
         <list-item>
-            <link type="page" page="reference.html#folder" v="v1">
-                <text v="v1">
-                    <textual>Folder</textual>
-                </text>
-            </link>
-        </list-item>
-        <list-item>
             <link type="page" page="reference.html#form" v="v1">
                 <text v="v1">
                     <textual>Form</textual>

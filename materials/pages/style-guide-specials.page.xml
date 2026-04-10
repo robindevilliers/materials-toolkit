@@ -414,10 +414,8 @@
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Message Tray widget presents a list of tray entries that are in the specified queue and that
-                        belongs to a compatible group with the current user. This widget is intended to display a
-                        limited set of tray entries which is what you will find as a member of the public or a customer
-                        or case principal. This widget is intended to be customer facing.
+                        The Message Tray widget presents a list of Wips sourced from the specified queue. By default,
+                        clicking on a panel, will execute the wizard.
                     </textual>
                 </text>
             </div>
@@ -428,47 +426,25 @@
             </message-tray>
         </div>
         <horizontal-rule/>
+
         <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
             flexBasis="100%">
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
-                    <textual>Case Tray</textual>
+                    <textual>Customised Message Tray</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Case Tray widget presents a list of cases. The widget is intended to display a limited set
-                        of cases that might relate to the current principal, or be for specific workflows that are
-                        reached a particular state (ie a result as been obtained). It opens case pages when an item is
-                        selected.
+                        The Message Tray can have its panels customised. In this case, the Message Tray supports content
+                        that will be rendered in a panel for each item it renders. In this configuration, the panels are
+                        not themselves clickable.
                     </textual>
                 </text>
             </div>
-            <kase-tray queue="main-user" v="v1">
+            <message-tray queue="main-user" v="v1" customisePanel="true">
                 <header>
-                    <textual>Case Tray</textual>
-                </header>
-            </kase-tray>
-        </div>
-        <horizontal-rule/>
-        <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
-            flexBasis="100%">
-            <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
-                flexBasis="100%" width="100%">
-                <title size="LARGE" v="v1">
-                    <textual>Folder</textual>
-                </title>
-                <text v="v1" flexBasis="500px">
-                    <textual>
-                        The Folder widget presents a list of entries that are in the specified queue and that belongs
-                        to a compatible group with the current user. This widget is intended to display the contents of
-                        a queue in a form that does not imply immediate execution, as a tray does.
-                    </textual>
-                </text>
-            </div>
-            <folder queue="main-user" v="v1">
-                <header>
-                    <textual>My Folder</textual>
+                    <textual>My Message Tray</textual>
                 </header>
                 <div justifyContent="SPACE_BETWEEN" orientation="COLUMN" v="v1">
                     <div v="v1">
@@ -552,7 +528,30 @@
                         </abandon-wip-button>
                     </div>
                 </div>
-            </folder>
+            </message-tray>
+        </div>
+        <horizontal-rule/>
+        <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+            flexBasis="100%">
+            <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+                flexBasis="100%" width="100%">
+                <title size="LARGE" v="v1">
+                    <textual>Case Tray</textual>
+                </title>
+                <text v="v1" flexBasis="500px">
+                    <textual>
+                        The Case Tray widget presents a list of cases. The widget is intended to display a limited set
+                        of cases that might relate to the current principal, or be for specific workflows that are
+                        reached a particular state (ie a result as been obtained). It opens case pages when an item is
+                        selected.
+                    </textual>
+                </text>
+            </div>
+            <kase-tray queue="main-user" v="v1">
+                <header>
+                    <textual>Case Tray</textual>
+                </header>
+            </kase-tray>
         </div>
         <horizontal-rule/>
         <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"

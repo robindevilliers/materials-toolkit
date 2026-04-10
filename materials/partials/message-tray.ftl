@@ -1,26 +1,34 @@
-<div class="message-tray-widget panel ${classes}" style="${itemStyles}">
+<div id="${id!}" class="message-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>" style="${itemStyles}">
     ${header}
     <div class="panel-body">
         <div class="message-tray-body panel-content">
             <#list values as val>
                 <div class="message-tray-item panel-item">
-                    <form action="${val.action}" method="post"
-                            enctype="application/x-www-form-urlencoded">
-                        <input type="hidden" name="_csrf" value="${_csrf}">
-                        <input type="hidden" name="_checkpoint" value="${_checkpoint}">
-                        <input type="hidden" name="payload" value="${val.payload}">
-                        <input type="hidden" name="source" value="${source}">
-                        <button id="message-tray-item-${val.workflowId}-${val.wizardId}" class="message-tray-button" type="submit"
-                                onclick="${testMode?string('alert(&quot;Tray item clicked&quot;); event.preventDefault();','')}">
-                        <span class="message-tray-line">
-                            <span class="message-tray-wizard-title">${val.wizardTitle}</span>
-                            <span class="message-tray-date">${val.date}</span>
-                        </span>
+
+                    <#if customisePanel>
+                        <div id="message-tray-item-${val.workflowId}-${val.wizardId}" style="${containerStyles}">
+                            ${val.html}
+                        </div>
+                    <#else>
+                        <form action="${val.action}" method="post"
+                                enctype="application/x-www-form-urlencoded">
+                            <input type="hidden" name="_csrf" value="${_csrf}">
+                            <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+                            <input type="hidden" name="payload" value="${val.payload}">
+                            <input type="hidden" name="source" value="${source}">
+                            <button id="message-tray-item-${val.workflowId}-${val.wizardId}" class="message-tray-button"
+                                    type="submit"
+                                    onclick="${testMode?string('alert(&quot;Tray item clicked&quot;); event.preventDefault();','')}">
                             <span class="message-tray-line">
-                            <span class="message-tray-description">${val.wizardDescription}</span>
-                        </span>
-                        </button>
-                    </form>
+                                <span class="message-tray-wizard-title">${val.wizardTitle}</span>
+                                <span class="message-tray-date">${val.date}</span>
+                            </span>
+                                <span class="message-tray-line">
+                                <span class="message-tray-description">${val.wizardDescription}</span>
+                            </span>
+                            </button>
+                        </form>
+                    </#if>
                 </div>
             </#list>
             <#if !values?has_content>
@@ -28,4 +36,54 @@
             </#if>
         </div>
     </div>
+    <#if !collapseFooter >
+        <div class="panel-footer">
+            <div class="pagination">
+                <div class="page-item <#if !previousPage?has_content >disabled</#if>">
+                    <form class="form-inline" method="get" action="${action}">
+                        <input type="hidden" name="bust" value="${bust}"/>
+                        <#if previousPage?has_content >
+                            <input type="hidden" name="fIndex" value="${previousPage}">
+                        </#if>
+                        <button type="submit" aria-label="Previous" class="btn btn-link page-link"
+                                <#if !previousPage?has_content >disabled</#if> name="lPage"
+                                onclick="${testMode?string('alert(&quot;Button clicked&quot;); event.preventDefault();','')}"
+                        >
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                    </form>
+                </div>
+
+                <#list offeredPages as page>
+                    <div class="page-item <#if page == currentPage >active</#if>">
+                        <form class="form-inline" method="get" action="${action}">
+                            <input type="hidden" name="bust" value="${bust}"/>
+                            <input type="hidden" name="fIndex" value="${page}">
+                            <button type="submit" aria-label="Page" class="page-link" name="lPage"
+                                    onclick="${testMode?string('alert(&quot;Button clicked&quot;); event.preventDefault();','')}"
+                            >
+                                ${page + 1}
+                            </button>
+                        </form>
+                    </div>
+                </#list>
+
+                <div class="page-item <#if !nextPage?has_content >disabled</#if>">
+                    <form class="form-inline" method="get" action="${action}">
+                        <input type="hidden" name="bust" value="${bust}"/>
+                        <#if nextPage?has_content >
+                            <input type="hidden" name="fIndex" value="${nextPage}">
+                        </#if>
+                        <button type="submit" aria-label="Next" class="btn btn-link page-link"
+                                onclick="${testMode?string('alert(&quot;Button clicked&quot;); event.preventDefault();','')}"
+                                <#if !nextPage?has_content >disabled</#if> name="lPage">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </#if>
 </div>

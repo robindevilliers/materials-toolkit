@@ -7,6 +7,7 @@ import Store from '../../store/Store';
 import ClassManager from '../ClassManager';
 import RenderingEngine from '../RenderingEngine';
 import { RenderError } from '../RenderError';
+import { StringBuffer } from "../../utilities/StringBuffer";
 
 export default class MessageTrayRenderer implements Renderer {
     accept(name: string): boolean {
@@ -24,6 +25,15 @@ export default class MessageTrayRenderer implements Renderer {
         const header = children.find(el => el.name === "header");
 
         const values = Store.getMessages().map(m => {
+
+                const buffer = new StringBuffer();
+                for (let i = 0; i < children.length; i++) {
+                    const child = children[i];
+
+                    if (child.name != "header") {
+                        buffer.append(renderingEngine.renderElement(child, element));
+                    }
+                }
 
                 const [wizardName, wizardVersion] = m.getWizardId().split(":");
                 const wizard = Store.getWizards().find(w => w.getName() === wizardName && w.getVersion() === wizardVersion);
@@ -43,7 +53,8 @@ export default class MessageTrayRenderer implements Renderer {
                     date: m.getDateTime().substring(0, 10),
                     dateTime: m.getDateTime(),
                     principal: m.getPrincipal(),
-                    payload: ''
+                    payload: '',
+                    html: buffer.toString()
                 };
             }
         );
@@ -57,6 +68,15 @@ export default class MessageTrayRenderer implements Renderer {
         data.source = "";
         data.action = "/operation/open-tray";
         data.testMode = Store.isTestContext();
+
+        data.customisePanel = element.attributes.customisePanel === 'true';
+        data.collapseFooter = element.attributes.collapseFooter === 'true';
+
+        data.pageSize = Number(element.attributes.pageSize || 20);
+        data.currentPage = 2;
+        data.previousPage = 1;
+        data.nextPage = 3;
+        data.offeredPages = [1, 2, 3 ];
 
         const classManager = new ClassManager(classMappings);
         flexItemSupport(data, classManager, element.attributes);

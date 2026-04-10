@@ -2,15 +2,18 @@
 .message-tray-widget {
   padding: 5px;
 
+  &:not(.customise-panel) {
+    .panel-item:hover {
+      background-color: theme-color("primary") !important;
+      color: color-yiq(theme-color("primary")) !important;
+    }
+  }
+
   .panel-body {
     background-color: theme-color("primary") !important;
   }
 
   .message-tray-body {
-    .panel-item:hover {
-      background-color: theme-color("primary") !important;
-      color: color-yiq(theme-color("primary")) !important;
-    }
 
     form {
       display: flex;
