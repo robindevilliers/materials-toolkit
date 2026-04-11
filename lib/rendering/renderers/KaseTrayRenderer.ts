@@ -23,7 +23,6 @@ export default class KaseTrayRenderer implements Renderer {
 
         const header = children.find(el => el.name === "header");
 
-        console.log(Store.getKases());
         const values = Store.getKases().map(m => {
 
                 const [workflowGroup, workflowName, workflowVersion] = m.getWorkflowId().split(":");
@@ -33,7 +32,7 @@ export default class KaseTrayRenderer implements Renderer {
                 return {
                     id: generateId(),
                     action: "/operation/kase-tray-open-kase",
-                    kaseId: generateId(),
+                    kaseId: m.getId(),
                     workflowId: m.getWorkflowId(),
                     workflowTitle: workflow?.getTitle(),
                     workflowDescription: workflow?.getDescription(),
@@ -52,11 +51,18 @@ export default class KaseTrayRenderer implements Renderer {
         data.values = values;
         data.trayId = generateId();
         data.source = "";
-        data.action = "#" + generateId();
+        data.action = "/operation/kase-tray-open-kase";
         data.parameters = {};
         data.testMode = Store.isTestContext();
-        data.disablePrevious = false;
-        data.disableNext = false;
+
+        data.customisePanel = element.attributes.customisePanel === 'true';
+        data.collapseFooter = element.attributes.collapseFooter === 'true';
+
+        data.pageSize = Number(element.attributes.pageSize || 20);
+        data.currentPage = 2;
+        data.previousPage = 1;
+        data.nextPage = 3;
+        data.offeredPages = [1, 2, 3 ];
 
         const classManager = new ClassManager(classMappings);
         flexItemSupport(data, classManager, element.attributes);

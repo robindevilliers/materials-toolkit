@@ -9,9 +9,9 @@ import RenderingEngine from '../RenderingEngine';
 import { RenderError } from '../RenderError';
 import { StringBuffer } from "../../utilities/StringBuffer";
 
-export default class MessageTrayRenderer implements Renderer {
+export default class WipTrayRenderer implements Renderer {
     accept(name: string): boolean {
-        return name === 'message-tray';
+        return name === 'wip-tray';
     }
 
     render(element: Element, classMappings: Properties, renderingEngine: RenderingEngine): string {
@@ -83,6 +83,6 @@ export default class MessageTrayRenderer implements Renderer {
         data.classes = classManager.toString();
         data.testMode = Store.isTestContext();
 
-        return renderingEngine.render('message-tray.ftl', data);
+        return renderingEngine.render('wip-tray.ftl', data);
     }
 }

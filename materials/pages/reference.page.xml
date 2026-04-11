@@ -2102,7 +2102,7 @@
                     <cell>
                         <text v="v1">
                             <textual>The source value should be included in the form as a hidden field. It indicates
-                                the source page that the Message Tray is configured within.
+                                the source page that the Wip Tray is configured within.
                             </textual>
                         </text>
                     </cell>
@@ -3260,27 +3260,31 @@
                 <textual>The template for the widget is the br.ftl file.</textual>
             </text>
         </div>
+
         <div v="v1" orientation="COLUMN">
-            <title id="case-tray" size="MEDIUM" v="v1">
-                <textual>Case Tray</textual>
+            <title id="wip-tray" size="MEDIUM" v="v1">
+                <textual>Wip Tray</textual>
             </title>
             <text v="v1">
-                <textual>The Case Tray Widget is a special widget that displays cases. The Case Tray can be configured
-                    to only display cases related to the current principal, or to display cases over a specified
-                    timeframe in the past. The Case Tray can also be restricted to dispaly only cases related to
-                    specific workflows, or workflows with specific results. Then the Case Tray is presented, it offers
-                    a series of panels that detail the case, and the workflow. If the panel is clicked on, then the
-                    Case Tray will open a Case Page.
+                <textual>The Wip Tray Widget is a special widget that displays Messages that represent Wizards for
+                    the current user to complete. When the Wip Tray Widget is configured, a Queue is specified. When
+                    the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
+                    according to the Groups that the current user possesses. The resulting Messages are displayed, and
+                    if the user clicks on one of them, the associated Wizard will load. The Wip Tray Widget is
+                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
+                    job.
                 </textual>
             </text>
             <text v="v1">
-                <textual>The Case Tray Widget can be viewed on the Style Guide Specials page.</textual>
+                <textual>The Wip Tray Widget can be viewed on the Style Guide Specials page.</textual>
             </text>
             <title size="SMALLER" v="v1">
                 <textual>Widget</textual>
             </title>
             <text v="v1">
-                <textual>The Case Tray Widget is a Flex Item in addition to the following properties.</textual>
+                <textual>The Wip Tray Widget is a Tray, and Flex Item and Flex Container in addition to the
+                    following properties.
+                </textual>
             </text>
             <table v="v1">
                 <row>
@@ -3297,20 +3301,157 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>id</textual>
+                            <textual>page</textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The id of the element. Must be unique within the page.</textual>
+                            <textual>The page id of a Wip Page that will be rendered when a panel is clicked. If
+                                customisePanel is true, then this attribute has no affect.
+                            </textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>a12347863</textual>
+                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>queue</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The queue from which to extract messages.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the wip-tray.ftl file. It takes the following tokens in
+                    addition to the tokens specified by the Tray basis.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>values</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The values token contains a list of objects that specify the messages that need to
+                                be displayed.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                wipId: string,
+                                <br/>
+                                id: string,
+                                <br/>
+                                kaseId: string,
+                                <br/>
+                                date: string,
+                                <br/>
+                                dateTime: string,
+                                <br/>
+                                wizardId: string,
+                                <br/>
+                                wizardTitle: string,
+                                <br/>
+                                wizardDescription: string,
+                                <br/>
+                                workflowId: string,
+                                <br/>
+                                workflowTitle: string,
+                                <br/>
+                                workflowDescription: string,
+                                <br/>
+                                principal: string,
+                                <br/>
+                                principalTitle: string,
+                                <br/>
+                                principalFirstName: string,
+                                <br/>
+                                principalLastName: string,
+                                <br/>
+                                principalDateOfBirth: string,
+                                <br/>
+                                action: string
+                                <br/>
+                                }&gt;
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+
+
+        <div v="v1" orientation="COLUMN">
+            <title id="case-tray" size="MEDIUM" v="v1">
+                <textual>Case Tray</textual>
+            </title>
+            <text v="v1">
+                <textual>The Case Tray Widget is a special widget that displays cases. The Case Tray can be configured
+                    to only display cases related to the current principal, or to display cases over a specified
+                    timeframe in the past. The Case Tray can also be restricted to display only cases related to
+                    specific workflows, or workflows with specific results. Then the Case Tray is presented, it offers
+                    a series of panels that detail the case, and the workflow. If the panel is clicked on, then the
+                    Case Tray will open a Case Page.
+                </textual>
+            </text>
+            <text v="v1">
+                <textual>The Case Tray Widget can be viewed on the Style Guide Specials page.</textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Wip Tray Widget is a Tray, and Flex Item and Flex Container in addition to the
+                    following properties.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+
                 <row>
                     <cell>
                         <text v="v1">
@@ -3448,94 +3589,6 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>id</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A unique id for the widget.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>header</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A header token contains the content for presenting the Case Tray Header.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>html</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>classes</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A list of classes that should be applied.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>class list</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
                             <textual>values</textual>
                         </text>
                     </cell>
@@ -3570,143 +3623,18 @@
                                 <br/>
                                 principal: string,
                                 <br/>
+                                principalTitle: string,
+                                <br/>
+                                principalFirstName: string,
+                                <br/>
+                                principalLastName: string,
+                                <br/>
+                                principalDateOfBirth: string,
+                                <br/>
+                                html: string,
+                                <br/>
                                 }&gt;
                             </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>testMode</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The testMode token indicates if the widget should render in test mode, which
-                                typically disables any button or link clicks.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>itemStyles</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The css styles that should be applied in order to support Flex Item definitions.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>css</textual>
-                        </text>
-                    </cell>
-                </row>
-
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>source</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The source value should be included in the form as a hidden field. It indicates
-                                the source page that the Tray is configured within.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>parameters</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The parameters token contains a map or dictionary of name value pairs that should
-                                be rendered as hidden fields for any buttons in the widget.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>dictionary</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>action</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>For most operations within the Case Tray, the button performs a GET request on
-                                the action endpoint. The action endpoint will point to the current page but has the
-                                appropriate anchor tag so that the browser maintains focus or brings into focus the
-                                correct html.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>url with anchor</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>disableNext</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The Case Tray offers a Next and a Previous button to support pagination. When
-                                this token is true, then the Next button should be disabled, or hidden.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>disablePrevious</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The Case Tray offers a Next and a Previous button to support pagination. When
-                                this token is true, then the Previous button should be disabled, or hidden.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
                         </text>
                     </cell>
                 </row>
@@ -11341,158 +11269,6 @@
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
-            <title id="message-tray" size="MEDIUM" v="v1">
-                <textual>Message Tray</textual>
-            </title>
-            <text v="v1">
-                <textual>The Message Tray Widget is a special widget that displays Messages that represent Wizards for
-                    the current user to complete. When the Message Tray Widget is configured, a Queue is specified. When
-                    the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
-                    according to the Groups that the current user possesses. The resulting Messages are displayed, and
-                    if the user clicks on one of them, the associated Wizard will load. The Message Tray Widget is
-                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
-                    job.
-                </textual>
-            </text>
-            <text v="v1">
-                <textual>The Message Tray Widget can be viewed on the Style Guide Specials page.</textual>
-            </text>
-            <title size="SMALLER" v="v1">
-                <textual>Widget</textual>
-            </title>
-            <text v="v1">
-                <textual>The Message Tray Widget is a Tray, and Flex Item and Flex Container in addition to the
-                    following properties.
-                </textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Permitted values/Examples</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>page</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The page id of a Wip Page that will be rendered when a panel is clicked. If
-                                customisePanel is true, then this attribute has no affect.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>queue</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The queue from which to extract messages.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-            <title size="SMALLER" v="v1">
-                <textual>Template</textual>
-            </title>
-            <text v="v1">
-                <textual>The template for the widget is the message-tray.ftl file. It takes the following tokens in
-                    addition to the tokens specified by the Tray basis.
-                </textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Type</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>values</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The values token contains a list of objects that specify the messages that need to
-                                be displayed.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>List&lt;{
-                                <br/>
-                                wipId: string,
-                                <br/>
-                                id: string,
-                                <br/>
-                                kaseId: string,
-                                <br/>
-                                date: string,
-                                <br/>
-                                dateTime: string,
-                                <br/>
-                                wizardId: string,
-                                <br/>
-                                wizardTitle: string,
-                                <br/>
-                                wizardDescription: string,
-                                <br/>
-                                workflowId: string,
-                                <br/>
-                                workflowTitle: string,
-                                <br/>
-                                workflowDescription: string,
-                                <br/>
-                                principal: string,
-                                <br/>
-                                principalTitle: string,
-                                <br/>
-                                principalFirstName: string,
-                                <br/>
-                                principalLastName: string,
-                                <br/>
-                                principalDateOfBirth: string,
-                                <br/>
-                                action: string
-                                <br/>
-                                }&gt;
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-        </div>
-        <div v="v1" orientation="COLUMN">
             <title id="mile-stone" size="MEDIUM" v="v1">
                 <textual>Mile Stone</textual>
             </title>
@@ -17925,6 +17701,158 @@
                         <text v="v1">
                             <textual>well-default, well-primary, well-secondary, well-info, well-warning, well-danger,
                                 well-success, well-muted, well-black, well-white
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+        <div v="v1" orientation="COLUMN">
+            <title id="wip-tray" size="MEDIUM" v="v1">
+                <textual>Wip Tray</textual>
+            </title>
+            <text v="v1">
+                <textual>The Wip Tray Widget is a special widget that displays Messages that represent Wizards for
+                    the current user to complete. When the Wip Tray Widget is configured, a Queue is specified. When
+                    the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
+                    according to the Groups that the current user possesses. The resulting Messages are displayed, and
+                    if the user clicks on one of them, the associated Wizard will load. The Wip Tray Widget is
+                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
+                    job.
+                </textual>
+            </text>
+            <text v="v1">
+                <textual>The Wip Tray Widget can be viewed on the Style Guide Specials page.</textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Wip Tray Widget is a Tray, and Flex Item and Flex Container in addition to the
+                    following properties.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>page</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The page id of a Wip Page that will be rendered when a panel is clicked. If
+                                customisePanel is true, then this attribute has no affect.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>queue</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The queue from which to extract messages.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the wip-tray.ftl file. It takes the following tokens in
+                    addition to the tokens specified by the Tray basis.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>values</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The values token contains a list of objects that specify the messages that need to
+                                be displayed.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                wipId: string,
+                                <br/>
+                                id: string,
+                                <br/>
+                                kaseId: string,
+                                <br/>
+                                date: string,
+                                <br/>
+                                dateTime: string,
+                                <br/>
+                                wizardId: string,
+                                <br/>
+                                wizardTitle: string,
+                                <br/>
+                                wizardDescription: string,
+                                <br/>
+                                workflowId: string,
+                                <br/>
+                                workflowTitle: string,
+                                <br/>
+                                workflowDescription: string,
+                                <br/>
+                                principal: string,
+                                <br/>
+                                principalTitle: string,
+                                <br/>
+                                principalFirstName: string,
+                                <br/>
+                                principalLastName: string,
+                                <br/>
+                                principalDateOfBirth: string,
+                                <br/>
+                                action: string
+                                <br/>
+                                }&gt;
                             </textual>
                         </text>
                     </cell>

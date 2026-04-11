@@ -419,11 +419,11 @@
                     </textual>
                 </text>
             </div>
-            <message-tray queue="main-user" v="v1">
+            <wip-tray queue="main-user" v="v1">
                 <header>
                     <textual>In Tray</textual>
                 </header>
-            </message-tray>
+            </wip-tray>
         </div>
         <horizontal-rule/>
 
@@ -442,7 +442,7 @@
                     </textual>
                 </text>
             </div>
-            <message-tray queue="main-user" v="v1" customisePanel="true">
+            <wip-tray queue="main-user" v="v1" customisePanel="true">
                 <header>
                     <textual>My Message Tray</textual>
                 </header>
@@ -528,7 +528,7 @@
                         </abandon-wip-button>
                     </div>
                 </div>
-            </message-tray>
+            </wip-tray>
         </div>
         <horizontal-rule/>
         <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"

@@ -67,7 +67,7 @@
     "timezone-select.ftl": 1,
     "title.ftl": 1,
     "tool-tip.ftl": 1,
-    "message-tray.ftl": 1,
+    "wip-tray.ftl": 1,
     "user-explorer.ftl": 1,
     "uuid.ftl": 1,
     "validation-rule.ftl": 1,

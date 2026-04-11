@@ -1,12 +1,12 @@
-<div id="${id!}" class="message-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>" style="${itemStyles}">
+<div id="${id!}" class="wip-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>" style="${itemStyles}">
     ${header}
     <div class="panel-body">
-        <div class="message-tray-body panel-content">
+        <div class="wip-tray-body panel-content">
             <#list values as val>
-                <div class="message-tray-item panel-item">
+                <div class="wip-tray-item panel-item">
 
                     <#if customisePanel>
-                        <div id="message-tray-item-${val.workflowId}-${val.wizardId}" style="${containerStyles}">
+                        <div id="wip-tray-item-${val.workflowId}-${val.wizardId}" style="${containerStyles}">
                             ${val.html}
                         </div>
                     <#else>
@@ -16,15 +16,15 @@
                             <input type="hidden" name="_checkpoint" value="${_checkpoint}">
                             <input type="hidden" name="payload" value="${val.payload}">
                             <input type="hidden" name="source" value="${source}">
-                            <button id="message-tray-item-${val.workflowId}-${val.wizardId}" class="message-tray-button"
+                            <button id="wip-tray-item-${val.workflowId}-${val.wizardId}" class="wip-tray-button"
                                     type="submit"
                                     onclick="${testMode?string('alert(&quot;Tray item clicked&quot;); event.preventDefault();','')}">
-                            <span class="message-tray-line">
-                                <span class="message-tray-wizard-title">${val.wizardTitle}</span>
-                                <span class="message-tray-date">${val.date}</span>
+                            <span class="wip-tray-line">
+                                <span class="wip-tray-wizard-title">${val.wizardTitle}</span>
+                                <span class="wip-tray-date">${val.date}</span>
                             </span>
-                                <span class="message-tray-line">
-                                <span class="message-tray-description">${val.wizardDescription}</span>
+                                <span class="wip-tray-line">
+                                <span class="wip-tray-description">${val.wizardDescription}</span>
                             </span>
                             </button>
                         </form>
@@ -32,7 +32,7 @@
                 </div>
             </#list>
             <#if !values?has_content>
-                <div id="message-tray-no-content" class="panel-no-content no-content">No Content</div>
+                <div id="wip-tray-no-content" class="panel-no-content no-content">No Content</div>
             </#if>
         </div>
     </div>
