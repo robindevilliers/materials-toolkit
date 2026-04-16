@@ -8,9 +8,9 @@ import RenderingEngine from '../RenderingEngine';
 import generateId from '../../utilities/generate-id';
 import { RenderError } from '../RenderError';
 
-export default class MessageExplorerRenderer implements Renderer {
+export default class WipExplorerRenderer implements Renderer {
     accept(name: string): boolean {
-        return name === 'message-explorer';
+        return name === 'wip-explorer';
     }
 
     render(element: Element, classMappings: Properties, renderingEngine: RenderingEngine): string {
@@ -25,8 +25,12 @@ export default class MessageExplorerRenderer implements Renderer {
                 const wizard = Store.getWizards().find(w => w.getName() === wizardName && w.getVersion() === wizardVersion);
 
                 const [workflowGroup, workflowName, workflowVersion] = m.getWorkflowId().split(":");
-                const workflow = Store.getWorkflows().find(w => w.getGroup() === workflowGroup && w.getName() === workflowName &&
-                    w.getVersion() === workflowVersion);
+                const workflow = Store.getWorkflows()
+                    .find(w =>
+                        w.getGroup() === workflowGroup &&
+                        w.getName() === workflowName &&
+                        w.getVersion() === workflowVersion
+                    );
 
                 return {
                     id: generateId(),
@@ -51,9 +55,6 @@ export default class MessageExplorerRenderer implements Renderer {
 
         const data: Record<string, any> = {};
         data.id = element.attributes.id;
-        data._csrf = generateId();
-        data._checkpoint = "17e3422d-0197-1000-b8bc-989daa23ef9c";
-        data.source = "";
         data.values = values;
         data.wizard = "";
         data.queue = "";
@@ -63,23 +64,19 @@ export default class MessageExplorerRenderer implements Renderer {
         data.endDate = "";
         data.action = "#" + generateId();
         data.parameters = {};
-
         data.workflows = Store.getWorkflows().map(w => {
             return {
                 id: w.getGroup() + ":" + w.getName() + ":" + w.getVersion(),
                 title: w.getTitle()
             };
         });
-
         data.wizards = Store.getWizards().map(w => {
             return {
                 id: w.getName() + ":" + w.getVersion(),
                 title: w.getTitle()
             };
         });
-
         data.queues = Store.getQueues();
-
         const classManager = new ClassManager(classMappings);
         flexItemSupport(data, classManager, element.attributes);
         data.classes = classManager.toString();
@@ -87,6 +84,6 @@ export default class MessageExplorerRenderer implements Renderer {
         data.disablePrevious = false;
         data.disableNext = false;
 
-        return renderingEngine.render('message-explorer.ftl', data);
+        return renderingEngine.render('wip-explorer.ftl', data);
     }
 }

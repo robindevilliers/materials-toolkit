@@ -55,9 +55,10 @@ import MenuItemRenderer from './MenuItemRenderer';
 import SubMenuRenderer from './SubMenuRenderer';
 import SubMenuLabelRenderer from './SubMenuLabelRenderer';
 import WipTrayRenderer from './WipTrayRenderer';
+import UserTrayRenderer from './UserTrayRenderer';
 import HeaderRenderer from './HeaderRenderer';
 import FakeQueueRenderer from './FakeQueueRenderer';
-import MessageExplorerRenderer from './MessageExplorerRenderer';
+import WipExplorerRenderer from './WipExplorerRenderer';
 import NotificationBannerRenderer from './NotificationBannerRenderer';
 import EmailRenderer from './EmailRenderer';
 import EmailConfirmationLinkRenderer from './EmailConfirmationLinkRenderer';
@@ -144,8 +145,9 @@ const registry = [
     new SubMenuRenderer(),
     new SubMenuLabelRenderer(),
     new WipTrayRenderer(),
+    new UserTrayRenderer(),
     new HeaderRenderer(),
-    new MessageExplorerRenderer(),
+    new WipExplorerRenderer(),
     new NotificationBannerRenderer(),
     new EmailRenderer(),
     new EmailConfirmationLinkRenderer(),

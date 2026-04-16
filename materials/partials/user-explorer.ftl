@@ -110,8 +110,7 @@
                                         </form>
                                     <#else >
                                         <form class="form-inline" method="post" action="${executeWorkflow}">
-                                            <input type="hidden" name="_csrf" value="${_csrf}"/>
-                                            <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+                                            <input type="hidden" name="payload" value="${payload}"/>
                                             <input type="hidden" name="username" value="${val.username}"/>
                                             <div class="btn-group" role="group">
                                                 <button type="submit" aria-label="Select" class="btn btn-primary"
@@ -166,8 +165,7 @@
             </form>
         <#else >
             <form class="form-inline" method="post" action="${cancelExecuteWorkflow}">
-                <input type="hidden" name="_csrf" value="${_csrf}"/>
-                <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+                <input type="hidden" name="payload" value="${payload}"/>
                 <div class="btn-group" role="group">
                     <button type="submit" aria-label="Cancel" class="btn btn-secondary"
                             onclick="${testMode?string('alert(&quot;Select clicked&quot;); event.preventDefault();','')}"

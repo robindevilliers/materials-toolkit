@@ -508,64 +508,6 @@
                         </text>
                     </cell>
                 </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>source</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The source value specifies the source definition that specified the button. This
-                                value must be supplied as a hidden field when the button is rendered as a form.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _csrf property specifies that the csrf token that should be used when rendering
-                                the form for the button. This value must be supplied as a hidden field.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the button is clicked. In this way, if the button is clicked again, the same entities
-                                are generated and the operation backing the button becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
             </table>
             <text v="v1">
                 <textual>The following classes are produced for the Button Widget.</textual>
@@ -1808,43 +1750,6 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
                             <textual>action</textual>
                         </text>
                     </cell>
@@ -1867,7 +1772,7 @@
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The bust token contains a unique id for each render of the message-explorer. This
+                            <textual>The bust token contains a unique id for each render of the wip-explorer. This
                                 helps to prevent any caching issues that affect the render, and also impacts how the
                                 page maintains focus on the widget as it is refreshed.
                             </textual>
@@ -2079,6 +1984,24 @@
                 <row>
                     <cell>
                         <text v="v1">
+                            <textual>payload</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The payload value must be rendered as a hidden field within each clickable panel.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
                             <textual>previousPage</textual>
                         </text>
                     </cell>
@@ -2090,25 +2013,6 @@
                     <cell>
                         <text v="v1">
                             <textual>number</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>source</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The source value should be included in the form as a hidden field. It indicates
-                                the source page that the Wip Tray is configured within.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>
@@ -3271,7 +3175,7 @@
                     the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
                     according to the Groups that the current user possesses. The resulting Messages are displayed, and
                     if the user clicks on one of them, the associated Wizard will load. The Wip Tray Widget is
-                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
+                    intended to be used for public consumption as opposed to the Wip Explorer, that does a similar
                     job.
                 </textual>
             </text>
@@ -4743,44 +4647,6 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-
-                <row>
-                    <cell>
-                        <text v="v1">
                             <textual>action</textual>
                         </text>
                     </cell>
@@ -4900,13 +4766,31 @@
                             <textual>The parameters token contains a map or dictionary of name value pairs that should
                                 be rendered as hidden fields for any buttons that support filtering, pagination or
                                 cancellation in the widget. This mechanism allows support for maintaining the parameters
-                                related to the Message Explorer or Case Explorer when doing a user lookup.
+                                related to the Wip Explorer or Case Explorer when doing a user lookup.
                             </textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
                             <textual>dictionary</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>payload</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The payload value must be rendered as a hidden field within the select form.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>
@@ -4938,7 +4822,7 @@
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The Message Explorer renders a list of messages where selecting a message will open
+                            <textual>The Wip Explorer renders a list of messages where selecting a message will open
                                 the associated Wip. This is the Open Wip Operation. This operation takes a source
                                 parameter that indicates the artefact that contains the definition for the Message
                                 Explorer. It is used to retrieve configuration values associated with the Message
@@ -10765,509 +10649,6 @@
                 </row>
             </table>
         </div>
-
-        <div v="v1" orientation="COLUMN">
-            <title id="message-explorer" size="MEDIUM" v="v1">
-                <textual>Message Explorer</textual>
-            </title>
-            <text v="v1">
-                <textual>The Message Explorer Widget presents a complex dialog that allows for searching and exploring
-                    the messages that reside in the queues on the Account. This widget is intended for members of staff
-                    where a high number of messages needs to be filtered using complex search criteria.
-                </textual>
-            </text>
-            <text v="v1">
-                <textual>The Message Explorer Widget can be viewed on the Style Guide Specials page.</textual>
-            </text>
-            <title size="SMALLER" v="v1">
-                <textual>Widget</textual>
-            </title>
-            <text v="v1">
-                <textual>The Message Explorer Widget is a Flex Item in addition to having the following properties.
-                </textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Permitted values/Examples</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>queue</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The queue property specifies the initial queue that the Message Explorer will
-                                retrieve messages for.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>processing</textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-            <title size="SMALLER" v="v1">
-                <textual>Template</textual>
-            </title>
-            <text v="v1">
-                <textual>The template for the widget is the message-explorer.ftl file. It takes the following tokens.
-                </textual>
-            </text>
-            <table v="v1">
-                <row>
-                    <column width="20%">
-                        <textual>Attribute</textual>
-                    </column>
-                    <column>
-                        <textual>Description</textual>
-                    </column>
-                    <column width="25%">
-                        <textual>Type</textual>
-                    </column>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>action</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>For most operations within the Message Explorer, the button performs a GET request
-                                on
-                                the action endpoint. The action endpoint will point to the current page but has the
-                                appropriate anchor tag so that the browser maintains focus or brings into focus the
-                                correct html.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>url with anchor</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>classes</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A list of classes that should be applied.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>class list</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>disableNext</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The Message Explorer offers a Next and a Previous button to support pagination.
-                                When this token is true, then the Next button should be disabled, or hidden.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>disablePrevious</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The Message Explorer offers a Next and a Previous button to support pagination.
-                                When this token is true, then the Previous button should be disabled, or hidden.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>id</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>A unique id for the widget.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>itemStyles</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The css styles that should be applied in order to support Flex Item definitions.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>css</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>parameters</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The parameters token contains a map or dictionary of name value pairs that should
-                                be rendered as hidden fields for any buttons that support filtering, pagination or
-                                cancellation in the widget. This mechanism allows support for maintaining the parameters
-                                related to the Message Explorer or Case Explorer when doing a user lookup.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>dictionary</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>principal</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The principal token contains the value used to filter the messages by case
-                                principal. Its value should be used to populate the principal field.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>queue</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The queue token contains the value used to filter the messages by queue. The token
-                                should be used to populate the current value of the Queue Select.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>queues</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The queues token contains a list of all the queues for the purposes of populating
-                                the Queues Select filter.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>List&lt;{
-                                <br/>
-                                name: string,
-                                <br/>
-                                title: string,
-                                <br/>
-                                description: string,
-                                <br/>
-                                }&gt;
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>source</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The Message Explorer renders a list of messages where selecting a message will open
-                                the associated Wip. This is the Open Wip Operation. This operation takes a source
-                                parameter that indicates the artefact that contains the definition for the Message
-                                Explorer. It is used to retrieve configuration values associated with the Message
-                                Explorer. This token should therefore be included as a hidden field in the form that
-                                executes the call to action when selecting a message.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>testMode</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The testMode token indicates if the widget should render in test mode, which
-                                typically disables any button or link clicks.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>boolean</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>values</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The values token contains a list of objects that specify the messages that need to
-                                be displayed.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>List&lt;{
-                                <br/>
-                                wipId: string,
-                                <br/>
-                                id: string,
-                                <br/>
-                                kaseId: string,
-                                <br/>
-                                date: string,
-                                <br/>
-                                dateTime: string,
-                                <br/>
-                                wizardId: string,
-                                <br/>
-                                wizardTitle: string,
-                                <br/>
-                                wizardDescription: string,
-                                <br/>
-                                workflowId: string,
-                                <br/>
-                                workflowTitle: string,
-                                <br/>
-                                workflowDescription: string,
-                                <br/>
-                                principal: string,
-                                <br/>
-                                principalTitle: string,
-                                <br/>
-                                principalFirstName: string,
-                                <br/>
-                                principalLastName: string,
-                                <br/>
-                                principalDateOfBirth: string,
-                                <br/>
-                                group: string,
-                                <br/>
-                                queue: string,
-                                <br/>
-                                action: string
-                                <br/>
-                                }&gt;
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>wizard</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The wizard token contains the value used to filter the results by wizard. The token
-                                should be used to populate the current value for the Wizard Select.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>wizards</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The wizards token contains a list of all the wizards for the purposes of populating
-                                the Wizard Select filter.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>List&lt;{
-                                <br/>
-                                id: string,
-                                <br/>
-                                title: string,
-                                <br/>
-                                }&gt;
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>workflow</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The workflow token contains the value used to filter the results by workflow. The
-                                token should be used to populate the current value for the Workflow Select.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>workflows</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The workflows token contains a list of all the workflows for the purposes of
-                                populating the Workflow Select filter.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>List&lt;{
-                                <br/>
-                                id: string,
-                                <br/>
-                                title: string,
-                                <br/>
-                                }&gt;
-                            </textual>
-                        </text>
-                    </cell>
-                </row>
-            </table>
-        </div>
         <div v="v1" orientation="COLUMN">
             <title id="mile-stone" size="MEDIUM" v="v1">
                 <textual>Mile Stone</textual>
@@ -12151,7 +11532,7 @@
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The bust token contains a unique id for each render of the message-explorer. This
+                            <textual>The bust token contains a unique id for each render of the wip-explorer. This
                                 helps to prevent any caching issues that affect the render, and also impacts how the
                                 page maintains focus on the widget as it is refreshed.
                             </textual>
@@ -13353,12 +12734,13 @@
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>_csrf</textual>
+                            <textual>payload</textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
+                            <textual>The payload value must be rendered as a hidden field within the form.
+                            </textual>
                         </text>
                     </cell>
                     <cell>
@@ -13517,15 +12899,17 @@
                         </text>
                     </cell>
                 </row>
+
                 <row>
                     <cell>
                         <text v="v1">
-                            <textual>_csrf</textual>
+                            <textual>payload</textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
+                            <textual>The payload value must be rendered as a hidden field within the form.
+                            </textual>
                         </text>
                     </cell>
                     <cell>
@@ -16482,7 +15866,7 @@
                 <textual>The User Explorer Widget offers a widget that allows the current user to find other users
                     within the Account. This facility is specifically useful in two ways: The Case Principal Picker Page
                     must include this widget and allows a member of staff to assign a specific user to an initiated
-                    Workflow as Case Principal. The second usage, is as a part of the Message Explorer. The Message
+                    Workflow as Case Principal. The second usage, is as a part of the Wip Explorer. The Message
                     Explorer Widget offers a mechanism to find a user's username in order to filter messages by.
                 </textual>
             </text>
@@ -16514,45 +15898,6 @@
                         <textual>Type</textual>
                     </column>
                 </row>
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_checkpoint</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The _checkpoint property contains a identifier that is used to generate ids when
-                                the form is submitted. In this way, if the form is submitted again, the same entities
-                                are generated and the operation backing the form becomes idempotent.
-                            </textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-
-                <row>
-                    <cell>
-                        <text v="v1">
-                            <textual>_csrf</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>The CSRF token for the form submit.</textual>
-                        </text>
-                    </cell>
-                    <cell>
-                        <text v="v1">
-                            <textual>string</textual>
-                        </text>
-                    </cell>
-                </row>
-
                 <row>
                     <cell>
                         <text v="v1">
@@ -16831,13 +16176,31 @@
                             <textual>The parameters token contains a map or dictionary of name value pairs that should
                                 be rendered as hidden fields for any buttons that support filtering, pagination or
                                 cancellation in the widget. This mechanism allows support for maintaining the parameters
-                                related to the Message Explorer or Case Explorer when doing a user lookup.
+                                related to the Wip Explorer or Case Explorer when doing a user lookup.
                             </textual>
                         </text>
                     </cell>
                     <cell>
                         <text v="v1">
                             <textual>dictionary</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>payload</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The payload value must be rendered as a hidden field within the select form.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
                         </text>
                     </cell>
                 </row>
@@ -17708,6 +17071,465 @@
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
+            <title id="wip-explorer" size="MEDIUM" v="v1">
+                <textual>Wip Explorer</textual>
+            </title>
+            <text v="v1">
+                <textual>The Wip Explorer Widget presents a complex dialog that allows for searching and exploring
+                    the messages that reside in the queues on the Account. This widget is intended for members of staff
+                    where a high number of messages needs to be filtered using complex search criteria.
+                </textual>
+            </text>
+            <text v="v1">
+                <textual>The Wip Explorer Widget can be viewed on the Style Guide Specials page.</textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Wip Explorer Widget is a Flex Item in addition to having the following properties.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>queue</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The queue property specifies the initial queue that the Wip Explorer will
+                                retrieve messages for.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>processing</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the wip-explorer.ftl file. It takes the following tokens.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>>
+                        <text v="v1">
+                            <textual>action</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>For most operations within the Wip Explorer, the button performs a GET request
+                                on
+                                the action endpoint. The action endpoint will point to the current page but has the
+                                appropriate anchor tag so that the browser maintains focus or brings into focus the
+                                correct html.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>url with anchor</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>classes</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A list of classes that should be applied.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>class list</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>disableNext</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The Wip Explorer offers a Next and a Previous button to support pagination.
+                                When this token is true, then the Next button should be disabled, or hidden.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>disablePrevious</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The Wip Explorer offers a Next and a Previous button to support pagination.
+                                When this token is true, then the Previous button should be disabled, or hidden.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>id</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A unique id for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>itemStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Item definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>parameters</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The parameters token contains a map or dictionary of name value pairs that should
+                                be rendered as hidden fields for any buttons that support filtering, pagination or
+                                cancellation in the widget. This mechanism allows support for maintaining the parameters
+                                related to the Wip Explorer or Case Explorer when doing a user lookup.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>dictionary</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>payload</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The payload value must be rendered as a hidden field within the select form.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>principal</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The principal token contains the value used to filter the messages by case
+                                principal. Its value should be used to populate the principal field.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>queue</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The queue token contains the value used to filter the messages by queue. The token
+                                should be used to populate the current value of the Queue Select.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>queues</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The queues token contains a list of all the queues for the purposes of populating
+                                the Queues Select filter.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                name: string,
+                                <br/>
+                                title: string,
+                                <br/>
+                                description: string,
+                                <br/>
+                                }&gt;
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>testMode</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The testMode token indicates if the widget should render in test mode, which
+                                typically disables any button or link clicks.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>values</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The values token contains a list of objects that specify the messages that need to
+                                be displayed.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                wipId: string,
+                                <br/>
+                                id: string,
+                                <br/>
+                                kaseId: string,
+                                <br/>
+                                date: string,
+                                <br/>
+                                dateTime: string,
+                                <br/>
+                                wizardId: string,
+                                <br/>
+                                wizardTitle: string,
+                                <br/>
+                                wizardDescription: string,
+                                <br/>
+                                workflowId: string,
+                                <br/>
+                                workflowTitle: string,
+                                <br/>
+                                workflowDescription: string,
+                                <br/>
+                                principal: string,
+                                <br/>
+                                principalTitle: string,
+                                <br/>
+                                principalFirstName: string,
+                                <br/>
+                                principalLastName: string,
+                                <br/>
+                                principalDateOfBirth: string,
+                                <br/>
+                                group: string,
+                                <br/>
+                                queue: string,
+                                <br/>
+                                action: string
+                                <br/>
+                                }&gt;
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>wizard</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The wizard token contains the value used to filter the results by wizard. The token
+                                should be used to populate the current value for the Wizard Select.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>wizards</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The wizards token contains a list of all the wizards for the purposes of populating
+                                the Wizard Select filter.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                id: string,
+                                <br/>
+                                title: string,
+                                <br/>
+                                }&gt;
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>workflow</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The workflow token contains the value used to filter the results by workflow. The
+                                token should be used to populate the current value for the Workflow Select.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>workflows</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The workflows token contains a list of all the workflows for the purposes of
+                                populating the Workflow Select filter.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>List&lt;{
+                                <br/>
+                                id: string,
+                                <br/>
+                                title: string,
+                                <br/>
+                                }&gt;
+                            </textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+        <div v="v1" orientation="COLUMN">
             <title id="wip-tray" size="MEDIUM" v="v1">
                 <textual>Wip Tray</textual>
             </title>
@@ -17717,7 +17539,7 @@
                     the Tray renders, the Platform will retrieve the Messages from the Queue and filter the messages
                     according to the Groups that the current user possesses. The resulting Messages are displayed, and
                     if the user clicks on one of them, the associated Wizard will load. The Wip Tray Widget is
-                    intended to be used for public consumption as opposed to the Message Explorer, that does a similar
+                    intended to be used for public consumption as opposed to the Wip Explorer, that does a similar
                     job.
                 </textual>
             </text>

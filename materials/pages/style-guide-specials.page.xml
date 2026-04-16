@@ -410,11 +410,11 @@
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
-                    <textual>Message Tray</textual>
+                    <textual>Wip Tray</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Message Tray widget presents a list of Wips sourced from the specified queue. By default,
+                        The Wip Tray widget presents a list of Wips sourced from the specified queue. By default,
                         clicking on a panel, will execute the wizard.
                     </textual>
                 </text>
@@ -432,11 +432,11 @@
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
-                    <textual>Customised Message Tray</textual>
+                    <textual>Customised Wip Tray</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Message Tray can have its panels customised. In this case, the Message Tray supports content
+                        The Wip Tray can have its panels customised. In this case, the Wip Tray supports content
                         that will be rendered in a panel for each item it renders. In this configuration, the panels are
                         not themselves clickable.
                     </textual>
@@ -444,7 +444,7 @@
             </div>
             <wip-tray queue="main-user" v="v1" customisePanel="true">
                 <header>
-                    <textual>My Message Tray</textual>
+                    <textual>My Wip Tray</textual>
                 </header>
                 <div justifyContent="SPACE_BETWEEN" orientation="COLUMN" v="v1">
                     <div v="v1">
@@ -559,21 +559,43 @@
             <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
                 flexBasis="100%" width="100%">
                 <title size="LARGE" v="v1">
-                    <textual>Message Explorer</textual>
+                    <textual>User Tray</textual>
                 </title>
                 <text v="v1" flexBasis="500px">
                     <textual>
-                        The Message Explorer widget allows the user to search for and view any messages to which he or
+                        The User Tray widget presents a list of users. The widget allows access to the User Pages,
+                        and composition and access to the buttons that to user oriented actions. Also Case Trays
+                        can be added to User Pages which will display related cases.
+                    </textual>
+                </text>
+            </div>
+            <user-tray queue="main-user" v="v1">
+                <header>
+                    <textual>User Tray</textual>
+                </header>
+            </user-tray>
+        </div>
+        <horizontal-rule/>
+        <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+            flexBasis="100%">
+            <div orientation="ROW" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"
+                flexBasis="100%" width="100%">
+                <title size="LARGE" v="v1">
+                    <textual>Wip Explorer</textual>
+                </title>
+                <text v="v1" flexBasis="500px">
+                    <textual>
+                        The Wip Explorer widget allows the user to search for and view any messages to which he or
                         she has access. This widget is intended to be a powerful browser intended for members of staff.
                         Multiple queues can be searched, and messages can be filtered by workflow, wizard and username.
-                        You can view the appearance of the Message Explorer, but its functionality is only going to work
+                        You can view the appearance of the Wip Explorer, but its functionality is only going to work
                         with a proper back-end server. Its highly recommended that you make sure this works when the
                         materials are deployed.
                     </textual>
                 </text>
             </div>
-            <message-explorer queue="main-user" v="v1">
-            </message-explorer>
+            <wip-explorer queue="main-user" v="v1">
+            </wip-explorer>
         </div>
         <horizontal-rule/>
         <div orientation="COLUMN" alignItems="CENTER" justifyContent="SPACE_BETWEEN" v="v1"

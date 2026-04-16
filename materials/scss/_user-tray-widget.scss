@@ -1,5 +1,5 @@
 
-.kase-tray-widget {
+.user-tray-widget {
   padding: 5px;
 
   &:not(.customise-panel) {
@@ -13,7 +13,7 @@
     background-color: theme-color("primary") !important;
   }
 
-  .kase-tray-body {
+  .user-tray-body {
 
     form {
       display: flex;
@@ -21,7 +21,7 @@
       justify-content: stretch;
     }
 
-    .kase-tray-button {
+    .user-tray-button {
       background-color: inherit;
       display: flex;
       cursor: pointer;
@@ -43,23 +43,23 @@
     }
   }
 
-  .kase-tray-footer {
+  .user-tray-footer {
     display: flex;
     justify-content: center;
     min-height: 66px;
   }
 
-  .kase-tray-line {
+  .user-tray-line {
     display: flex;
     width: 100%;
     justify-content: space-between;
 
-    .kase-tray-wizard-title {
+    .user-tray-wizard-title {
       font-size: 1.25em;
       font-family: $font-title-primary;
     }
 
-    .kase-tray-description {
+    .user-tray-description {
       margin: 0 1em;
       letter-spacing: initial;
       line-height: initial;
@@ -70,16 +70,16 @@
       font-style: normal;
     }
 
-    .kase-tray-workflow-title {
+    .user-tray-title {
       align-self: flex-end;
     }
 
-    .kase-tray-workflow-description {
+    .user-tray-description {
       align-self: flex-end;
       font-family: $font-text;
     }
 
-    .kase-tray-principal {
+    .user-tray-principal {
       align-self: flex-end;
     }
 
@@ -88,7 +88,7 @@
     }
   }
 
-  .kase-tray-button-line {
+  .user-tray-button-line {
     display: flex;
     padding: 1em;
     justify-content: flex-end;

@@ -1,7 +1,6 @@
 <form action="${action}" class="reset-password-panel" method="post" enctype="application/x-www-form-urlencoded"
         accept-charset="UTF-8" style="${itemStyles}">
-    <input type="hidden" name="_csrf" value="${_csrf}">
-    <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+    <input type="hidden" name="payload" value="${payload}">
     <div class="form-group">
         <label for="resetPasswordPasswordOnce" class="form-label label">Password</label>
         <input id="resetPasswordPasswordOnce" type="password" class="form-control" name="passwordOnce" placeholder="">

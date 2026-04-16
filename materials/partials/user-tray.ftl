@@ -1,35 +1,39 @@
-<div id="${id!}" class="wip-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>"
+<div id="${id!}" class="user-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>"
         style="${itemStyles}">
     ${header}
     <div class="panel-body">
-        <div class="wip-tray-body panel-content">
+        <div class="user-tray-body panel-content">
             <#list values as val>
-                <div class="wip-tray-item panel-item">
+                <div class="user-tray-item panel-item">
 
                     <#if customisePanel>
-                        <div id="wip-tray-item-${val.workflowId}-${val.wizardId}" style="${containerStyles}">
+                        <div id="user-tray-item-${val.username}" style="${containerStyles}">
                             ${val.html}
                         </div>
                     <#else>
                         <form action="${val.action}" method="post" enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="payload" value="${val.payload}">
-                            <button id="wip-tray-item-${val.workflowId}-${val.wizardId}" class="wip-tray-button"
-                                    type="submit"
-                                    onclick="${testMode?string('alert(&quot;Tray item clicked&quot;); event.preventDefault();','')}">
-                            <span class="wip-tray-line">
-                                <span class="wip-tray-wizard-title">${val.wizardTitle}</span>
-                                <span class="wip-tray-date">${val.date}</span>
-                            </span>
-                                <span class="wip-tray-line">
-                                <span class="wip-tray-description">${val.wizardDescription}</span>
-                            </span>
+                            <button id="user-tray-item-${val.username}" class="user-tray-button" type="submit"
+                                    onclick="${testMode?string('alert(&quot;Kase Tray item clicked&quot;); event.preventDefault();','')}">
+                                <span class="user-tray-line">
+                                    <span class="user-tray-title">${val.username}</span>
+                                    <span class="user-tray-date">${val.lastLoggedIn}</span>
+                                </span>
+                                <span class="user-tray-line">
+                                    <span class="user-tray-title">${val.title} ${val.firstName} ${val.lastName}</span>
+                                    <span class="user-tray-date">${val.dateOfBirth}</span>
+                                </span>
+                                <span class="user-tray-line">
+                                    <span class="user-tray-title"></span>
+                                    <span class="user-tray-date">${val.email}</span>
+                                </span>
                             </button>
                         </form>
                     </#if>
                 </div>
             </#list>
             <#if !values?has_content>
-                <div id="wip-tray-no-content" class="panel-no-content no-content">No Content</div>
+                <div id="user-tray-no-content" class="panel-no-content no-content">No Content</div>
             </#if>
         </div>
     </div>

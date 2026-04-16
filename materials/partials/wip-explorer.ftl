@@ -1,9 +1,9 @@
-<div id="${id}" class="message-explorer-widget explorer panel ${classes}" style="${itemStyles}">
+<div id="${id}" class="wip-explorer-widget explorer panel ${classes}" style="${itemStyles}">
     <div class="header panel-header">
         <form class="form-inline explorer-query" method="get" action="${action}">
             <div class="header-row">
                 <div class="explorer-header-title">
-                    Message Lookup
+                    Wip Lookup
                 </div>
             </div>
             <div class="header-row">
@@ -143,16 +143,12 @@
                             </div>
                         </div>
 
-                        <form class="explorer-form"
-                                action="${val.action}"
-                                method="post" enctype="application/x-www-form-urlencoded">
-                            <input type="hidden" name="_csrf" value="${_csrf}">
-                            <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+                        <form class="explorer-form" action="${val.action}" method="post"
+                                enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="payload" value="${val.payload}">
-                            <input type="hidden" name="source" value="${source}">
                             <span class="explorer-button-line">
                                     <button class="btn btn-primary"
-                                            id="message-explorer-item-${val.workflowId}-${val.wizardId}"
+                                            id="wip-explorer-item-${val.workflowId}-${val.wizardId}"
                                             onclick="${testMode?string('alert(&quot;Open clicked&quot;); event.preventDefault();','')}"
                                             type="submit">
                                         Open

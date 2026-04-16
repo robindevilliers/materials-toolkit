@@ -1116,13 +1116,6 @@
             </link>
         </list-item>
         <list-item>
-            <link type="page" page="reference.html#message-explorer" v="v1">
-                <text v="v1">
-                    <textual>Message Explorer</textual>
-                </text>
-            </link>
-        </list-item>
-        <list-item>
             <link type="page" page="reference.html#mile-stone" v="v1">
                 <text v="v1">
                     <textual>Mile Stone</textual>
@@ -1364,6 +1357,13 @@
             <link type="page" page="reference.html#well" v="v1">
                 <text v="v1">
                     <textual>Well</textual>
+                </text>
+            </link>
+        </list-item>
+        <list-item>
+            <link type="page" page="reference.html#wip-explorer" v="v1">
+                <text v="v1">
+                    <textual>Wip Explorer</textual>
                 </text>
             </link>
         </list-item>

@@ -1,7 +1,6 @@
 <form action="${action}" class="reset-password-request-panel" method="post" enctype="application/x-www-form-urlencoded"
         accept-charset="UTF-8">
-    <input type="hidden" name="_csrf" value="${_csrf}">
-    <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+    <input type="hidden" name="payload" value="${payload}">
     <div class="form-group">
         <label for="resetPasswordEmail" class="form-label label">Email Address</label>
         <input id="resetPasswordEmail" type="text" name="email" class="form-control" value="${(email)!}" placeholder="">

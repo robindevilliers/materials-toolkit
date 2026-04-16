@@ -1,4 +1,5 @@
-<div id="${id!}" class="kase-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>" style="${itemStyles}">
+<div id="${id!}" class="kase-tray-widget panel ${classes}  <#if customisePanel>customise-panel</#if>"
+        style="${itemStyles}">
     ${header}
     <div class="panel-body">
         <div class="kase-tray-body panel-content">
@@ -10,12 +11,8 @@
                             ${val.html}
                         </div>
                     <#else>
-                        <form action="${val.action}" method="post"
-                                enctype="application/x-www-form-urlencoded">
-                            <input type="hidden" name="_csrf" value="${_csrf}">
-                            <input type="hidden" name="_checkpoint" value="${_checkpoint}">
+                        <form action="${val.action}" method="post" enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="payload" value="${val.payload}">
-                            <input type="hidden" name="source" value="${source}">
                             <button id="kase-tray-item-${val.kaseId}" class="kase-tray-button" type="submit"
                                     onclick="${testMode?string('alert(&quot;Kase Tray item clicked&quot;); event.preventDefault();','')}">
                             <span class="kase-tray-line">

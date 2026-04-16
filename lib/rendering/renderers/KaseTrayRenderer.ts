@@ -46,24 +46,19 @@ export default class KaseTrayRenderer implements Renderer {
 
         const data: Record<string, any> = {};
         data.id = element.attributes.id;
-        data._csrf = generateId();
         data.header = header ? renderingEngine.renderElement(header, element) : "";
         data.values = values;
         data.trayId = generateId();
-        data.source = "";
-        data.action = "/operation/kase-tray-open-kase";
+        data.action = "#" + generateId();
         data.parameters = {};
         data.testMode = Store.isTestContext();
-
         data.customisePanel = element.attributes.customisePanel === 'true';
         data.collapseFooter = element.attributes.collapseFooter === 'true';
-
         data.pageSize = Number(element.attributes.pageSize || 20);
         data.currentPage = 2;
         data.previousPage = 1;
         data.nextPage = 3;
-        data.offeredPages = [1, 2, 3 ];
-
+        data.offeredPages = [1, 2, 3];
         const classManager = new ClassManager(classMappings);
         flexItemSupport(data, classManager, element.attributes);
         data.classes = classManager.toString();
