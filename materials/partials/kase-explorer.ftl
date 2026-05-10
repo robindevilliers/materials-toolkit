@@ -59,7 +59,7 @@
         <#else>
             <div class="explorer-item-list">
                 <#list values as val>
-                    <a class="explorer-item-select" href="#${val.id}"
+                    <a class="explorer-item-select" href="#kase-explorer-item-${val.id}"
                             role="button" aria-expanded="false" aria-controls="${val.id}">
                         <span class="explorer-workflow-description">${val.dateTime}</span>
                         <span class="explorer-principal">${val.principal}</span>
@@ -68,7 +68,7 @@
             </div>
             <div class="explorer-item-detail" id="${id}">
                 <#list values as val>
-                    <div id="${val.id}" class="explorer-item" data-display="flex"
+                    <div id="kase-explorer-item-${val.id}" class="explorer-item" data-display="flex"
                             data-parent="#${id}">
 
                         <div class="explorer-line">
@@ -103,8 +103,7 @@
                                 enctype="application/x-www-form-urlencoded">
                             <input type="hidden" name="payload" value="${val.payload}">
                             <span class="explorer-button-line">
-                                    <button class="btn btn-primary"
-                                            id="explorer-item-${val.workflowId}"
+                                    <button class="btn btn-primary" id="select-button"
                                             onclick="${testMode?string('alert(&quot;Button clicked&quot;); event.preventDefault();','')}"
                                             type="submit">
                                         Open

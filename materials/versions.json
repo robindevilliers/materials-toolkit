@@ -75,7 +75,10 @@
     "value-panel.ftl": 1,
     "warning.ftl": 1,
     "well.ftl": 1,
-    "wizard-test-results.ftl": 1
+    "wizard-test-results.ftl": 1,
+    "template.ftl": 1,
+    "template-panel.ftl": 1,
+    "template-target.ftl": 1
   },
   "pages": {
     "case-principal-picker.page.xml": 1,

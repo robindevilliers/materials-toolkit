@@ -4,7 +4,7 @@
         <div v="v1" orientation="ROW" justifyContent="SPACE_AROUND">
             <div v="v1" orientation="COLUMN" justifyContent="SPACE_AROUND" alignItems="CENTER">
                 <title size="LARGE" v="v1">
-                    <textual>Thanks for registering.</textual>
+                    <textual>Thank You for Registering</textual>
                 </title>
                 <text v="v1">
                     <textual>

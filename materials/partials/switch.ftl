@@ -1,1 +1,1 @@
-<div class="${classes}" style="${itemStyles}">${content}</div>
+<div class="${classes}" style="${itemStyles} ${containerStyles}">${content}</div>

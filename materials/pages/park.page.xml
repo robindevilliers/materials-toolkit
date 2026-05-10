@@ -1,0 +1,20 @@
+<?schema version="2"?>
+<page defnVersion="v1" id="intro" title="Parking" orientation="COLUMN">
+    <title size="LARGE" v="v1">
+        <textual>Your Parking Queue</textual>
+    </title>
+
+    <wip-tray id="parking-wip-tray" queue="PARKING" v="v1">
+        <header>
+            <textual>Parked Wizards</textual>
+        </header>
+    </wip-tray>
+
+    <div justifyContent="END" v="v1">
+        <accept-button id="done-button" buttonFlavour="PRIMARY" margin="0.25em 0.5em" v="v1">
+            <text v="v1">
+                <textual>Done</textual>
+            </text>
+        </accept-button>
+    </div>
+</page>

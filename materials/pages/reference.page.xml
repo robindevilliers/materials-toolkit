@@ -7012,6 +7012,44 @@
                         </text>
                     </cell>
                 </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>displayFormHeader</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>Boolean value indicating if the header should be displayed at the top of the
+                                form.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>header</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A string containing header information that should be displayed as a title or
+                                header to the form.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
@@ -11361,6 +11399,63 @@
                         </text>
                     </cell>
                 </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>displayPageHeader</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>Boolean value indicating if the header should be displayed at the top of the
+                                page.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>boolean</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>header</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A string containing header information that should be displayed as a title or
+                                header to the page.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>parkButton</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A string containing the html to render the Park Button if the Park Button should be
+                                displayed on the page. This value may not be supplied.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>html</textual>
+                        </text>
+                    </cell>
+                </row>
             </table>
         </div>
         <div v="v1" orientation="COLUMN">
@@ -14721,6 +14816,26 @@
                 <row>
                     <cell>
                         <text v="v1">
+                            <textual>containerStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Container
+                                definitions. The containerStyles attribute affect the contents of any If and Def
+                                elements the Switch contains.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
                             <textual>itemStyles</textual>
                         </text>
                     </cell>
@@ -14862,6 +14977,341 @@
                 </row>
             </table>
         </div>
+        <div v="v1" orientation="COLUMN">
+            <title id="template" size="MEDIUM" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Widget is used to compose a Template Page into the current page. When the page is
+                    rendered, the Template Page is also rendered, and its content is injected into the current
+                    page as the html rendering of this widget.
+                </textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Widget is a Flex Item and Flex Container.</textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the template.ftl file. It takes the following tokens.</textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>id</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A unique id for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>classes</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A list of classes that should be applied.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>class list</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>itemStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Item definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>containerStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Container
+                                definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>content</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The html content for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>html</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+        <div v="v1" orientation="COLUMN">
+            <title id="template-panel" size="MEDIUM" v="v1">
+                <textual>Template Panel</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Panel Widget is used to defined content that will be injected into a Template
+                    Widget. This widget must be the immediate child of a Template Widget. The Template Panel is matched
+                    to a Template Target based on the name attribute.
+                </textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Panel Widget is a Flex Container.</textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>name</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The name of the panel. This name is matched with a Template Target when the
+                                template is rendered. The content of the panel is then injected into the target.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <text v="v1">
+                <textual>The Template Panel has no ftl file as its content is injected into the template-target.ftl file
+                    when rendered.
+                </textual>
+            </text>
+        </div>
+        <div v="v1" orientation="COLUMN">
+            <title id="template-target" size="MEDIUM" v="v1">
+                <textual>Template Target</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Target Widget is used to compose hosting content into a Template Page. The content
+                    is sourced from a matching Template Panel.
+                </textual>
+            </text>
+            <title size="SMALLER" v="v1">
+                <textual>Widget</textual>
+            </title>
+            <text v="v1">
+                <textual>The Template Target Widget is a Flex Item.</textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Permitted values/Examples</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>name</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The name of the target. This name is matched with a Template Panel when the
+                                template is rendered. The contents of the panel are injected as content into the target.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+            <title size="SMALLER" v="v1">
+                <textual>Template</textual>
+            </title>
+            <text v="v1">
+                <textual>The template for the widget is the template-target.ftl file. It takes the following tokens.
+                </textual>
+            </text>
+            <table v="v1">
+                <row>
+                    <column width="20%">
+                        <textual>Attribute</textual>
+                    </column>
+                    <column>
+                        <textual>Description</textual>
+                    </column>
+                    <column width="25%">
+                        <textual>Type</textual>
+                    </column>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>id</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A unique id for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>string</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>classes</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>A list of classes that should be applied.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>class list</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>itemStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Item definitions.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>containerStyles</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The css styles that should be applied in order to support Flex Container
+                                definitions. These container styles are obtained from the matched Template Panel.
+                            </textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>css</textual>
+                        </text>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <text v="v1">
+                            <textual>content</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>The html content for the widget.</textual>
+                        </text>
+                    </cell>
+                    <cell>
+                        <text v="v1">
+                            <textual>html</textual>
+                        </text>
+                    </cell>
+                </row>
+            </table>
+        </div>
+
         <div v="v1" orientation="COLUMN">
             <title id="text" size="MEDIUM" v="v1">
                 <textual>Text</textual>

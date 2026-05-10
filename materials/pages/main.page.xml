@@ -7,7 +7,7 @@
                 padding="0.5em" margin="0em 2em 1em" v="v1" background="white"/>
             <div orientation="COLUMN" v="v1">
                 <title size="LARGE" v="v1">
-                    <textual fontFlavour="WHITE" >Welcome to the Materials Toolkit</textual>
+                    <textual fontFlavour="WHITE">Welcome to the Materials Toolkit</textual>
                 </title>
                 <text v="v1">
                     <textual>
@@ -225,6 +225,78 @@
             </row>
             <row>
                 <cell>
+                    <link type="page" page="case-principal-picker.html" v="v1">
+                        <text v="v1">
+                            <textual>Case Principal Picker Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            case-principal-picker.page.xml
+                        </textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            Workflows can be arbitrarily assigned to users by the initiator of the Workflow. This
+                            setting is controlled by the definition of the Workflow and is used by Workflow process that
+                            are intended to be intiated by staff on behalf of the account&apos;s clients. When set, this
+                            page will present allowing the Staff member to select the Case Principal, the owner of the
+                            Workflow.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="confirm.html" v="v1">
+                        <text v="v1">
+                            <textual>Confirm Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>workflow-confirm.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            Some operations require a confirmation page. This page will be presented as required.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="email-confirmation-complete.html" v="v1">
+                        <text v="v1">
+                            <textual>Email Confirmation Complete Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            email-confirmation-complete.page.xml
+                        </textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            This page is presented when a user clicks on
+                            the email confirmation link they will receive as a part of the registration process.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
                     <link type="page" page="error.html" v="v1">
                         <text v="v1">
                             <textual>Error Page</textual>
@@ -240,6 +312,28 @@
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
                             This is the standard error page that is presented whenever an unexpected error occurs.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="login-form.html" v="v1">
+                        <text v="v1">
+                            <textual>Login Form Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>login-form.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            The Login Form Page is presented to the user when a Link is configured to require
+                            authentication when used.
                         </textual>
                     </text>
                 </cell>
@@ -269,26 +363,94 @@
             </row>
             <row>
                 <cell>
-                    <link type="page" page="unauthorized.html" v="v1">
+                    <link type="page" page="park.html" v="v1">
                         <text v="v1">
-                            <textual>Unauthorized Page</textual>
+                            <textual>Park Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>park.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            The Park Page is presented when the Parking Queue button is clicked. This is a part of the
+                            Parking Queue Management feature.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="payment-confirmation.html" v="v1">
+                        <text v="v1">
+                            <textual>Payment Confirmation Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>payment-confirmation.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            The Payment Confirmation Page is presented as the final page in the payment sequence when
+                            the Payment Provider returns the browser and isn't explicitly told which page to use. This
+                            typically happens when the payment provider delegates to the mobile platform for MFA
+                            confirmation.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="payment-error.html" v="v1">
+                        <text v="v1">
+                            <textual>Payment Error Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>payment-error.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            The Payment Error Page is presented when a Payment Provider hands back to the platform when
+                            an error occurs.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="privacy.html" v="v1">
+                        <text v="v1">
+                            <textual>Privacy Page</textual>
                         </text>
                     </link>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
-                            unauthorized.page.xml
+                            privacy.page.xml
                         </textual>
                     </text>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
-                            In most situations, whenever a user requests a Page that he is unauthorized to view, then
-                            the Page Resolution Process will not find a suitable page to present and the Not Found Page
-                            is served. In some very limited situations, the resolution process is not used, and in those
-                            situations, we present this page when the current user is unauthorized.
+                            This privacy page is not strictly speaking required by the platform. It is referenced by the
+                            login panel template. That panel will present a link that links to this page which outlines
+                            the account&apos;s privacy policy. You can introduce additional pages in the same way for
+                            arbitrary uses (subject to our terms and conditions of course).
                         </textual>
                     </text>
                 </cell>
@@ -343,77 +505,25 @@
             </row>
             <row>
                 <cell>
-                    <link type="page" page="email-confirmation-complete.html" v="v1">
+                    <link type="page" page="request-error.html" v="v1">
                         <text v="v1">
-                            <textual>Email Confirmation Complete Page</textual>
+                            <textual>Request Error Page</textual>
                         </text>
                     </link>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
-                            email-confirmation-complete.page.xml
+                            request-error.page.xml
                         </textual>
                     </text>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
-                            This page is presented when a user clicks on
-                            the email confirmation link they will receive as a part of the registration process.
-                        </textual>
-                    </text>
-                </cell>
-            </row>
-            <row>
-                <cell>
-                    <link type="page" page="case-principal-picker.html" v="v1">
-                        <text v="v1">
-                            <textual>Case Principal Picker Page</textual>
-                        </text>
-                    </link>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            case-principal-picker.page.xml
-                        </textual>
-                    </text>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            Workflows can be arbitrarily assigned to users by the initiator of the Workflow. This
-                            setting is controlled by the definition of the Workflow and is used by Workflow process that
-                            are intended to be intiated by staff on behalf of the account&apos;s clients. When set, this
-                            page will present allowing the Staff member to select the Case Principal, the owner of the
-                            Workflow.
-                        </textual>
-                    </text>
-                </cell>
-            </row>
-            <row>
-                <cell>
-                    <link type="page" page="privacy.html" v="v1">
-                        <text v="v1">
-                            <textual>Privacy Page</textual>
-                        </text>
-                    </link>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            privacy.page.xml
-                        </textual>
-                    </text>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            This privacy page is not strictly speaking required by the platform. It is referenced by the
-                            login panel template. That panel will present a link that links to this page which outlines
-                            the account&apos;s privacy policy. You can introduce additional pages in the same way for
-                            arbitrary uses (subject to our terms and conditions of course).
+                            The Request Error Page is presented when the platform experiences an error and can identify
+                            that the cause is as a result of the incoming data, but the platform cannot return to the
+                            original page and present the error.
                         </textual>
                     </text>
                 </cell>
@@ -516,92 +626,24 @@
             </row>
             <row>
                 <cell>
-                    <link type="page" page="wizard-test-results.html" v="v1">
+                    <link type="page" page="unauthorized.html" v="v1">
                         <text v="v1">
-                            <textual>Wizard Test Results Page</textual>
+                            <textual>Unauthorized Page</textual>
                         </text>
                     </link>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
-                        <textual>wizard-test-results.page.xml</textual>
+                        <textual>unauthorized.page.xml</textual>
                     </text>
                 </cell>
                 <cell>
                     <text paragraphStyle="PLAIN" v="v1">
                         <textual>
-                            The Wizard Test Results page is a special purpose page that presents the Wizard Test Results
-                            widget. This page is only presented by the Admin Console as a result of testing a Wizard.
-                        </textual>
-                    </text>
-                </cell>
-            </row>
-
-            <row>
-                <cell>
-                    <link type="page" page="workflow-confirm.html" v="v1">
-                        <text v="v1">
-                            <textual>Workflow Confirm Page</textual>
-                        </text>
-                    </link>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>workflow-confirm.page.xml</textual>
-                    </text>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            Whenever a Workflow is initiated by clicking on the Initiate Workflow Button, or Menu Item,
-                            then this page is presented. This page works as a confirmation page, to allow the user to
-                            cancel the previous action.
-                        </textual>
-                    </text>
-                </cell>
-            </row>
-            <row>
-                <cell>
-                    <link type="page" page="confirm.html" v="v1">
-                        <text v="v1">
-                            <textual>Confirm Page</textual>
-                        </text>
-                    </link>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>workflow-confirm.page.xml</textual>
-                    </text>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            Some operations require a confirmation page. This page will be presented as required.
-                        </textual>
-                    </text>
-                </cell>
-            </row>
-            <row>
-                <cell>
-                    <link type="page" page="workflow-executed.html" v="v1">
-                        <text v="v1">
-                            <textual>Workflow Executed Page</textual>
-                        </text>
-                    </link>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>workflow-executed.page.xml</textual>
-                    </text>
-                </cell>
-                <cell>
-                    <text paragraphStyle="PLAIN" v="v1">
-                        <textual>
-                            This page is presented immediately after a Workflow has been initiated. What actually
-                            happens after intiating a workflow depends on the Workflow&apos;s plan, but in some cases
-                            there would be no indication to the current user that anything has happened. This page gives
-                            some indication. It is also possible that the current user, the Case Principal, will have a
-                            Wizard to complete. In this case the Wizard will present after this page.
+                            In most situations, whenever a user requests a Page that he is unauthorized to view, then
+                            the Page Resolution Process will not find a suitable page to present and the Not Found Page
+                            is served. In some very limited situations, the resolution process is not used, and in those
+                            situations, we present this page when the current user is unauthorized.
                         </textual>
                     </text>
                 </cell>
@@ -630,6 +672,28 @@
             </row>
             <row>
                 <cell>
+                    <link type="page" page="wizard-test-results.html" v="v1">
+                        <text v="v1">
+                            <textual>Wizard Test Results Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>wizard-test-results.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            The Wizard Test Results page is a special purpose page that presents the Wizard Test Results
+                            widget. This page is only presented by the Admin Console as a result of testing a Wizard.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
                     <link type="page" page="wizard-transfer-confirmation.html" v="v1">
                         <text v="v1">
                             <textual>Wizard Transfer Confirmation Form</textual>
@@ -646,6 +710,54 @@
                         <textual>
                             This page is presented immediately when the Transfer Button is clicked within a
                             wizard.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="workflow-confirm.html" v="v1">
+                        <text v="v1">
+                            <textual>Workflow Confirm Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>workflow-confirm.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            Whenever a Workflow is initiated by clicking on the Initiate Workflow Button, or Menu Item,
+                            then this page is presented. This page works as a confirmation page, to allow the user to
+                            cancel the previous action.
+                        </textual>
+                    </text>
+                </cell>
+            </row>
+            <row>
+                <cell>
+                    <link type="page" page="workflow-executed.html" v="v1">
+                        <text v="v1">
+                            <textual>Workflow Executed Page</textual>
+                        </text>
+                    </link>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>workflow-executed.page.xml</textual>
+                    </text>
+                </cell>
+                <cell>
+                    <text paragraphStyle="PLAIN" v="v1">
+                        <textual>
+                            This page is presented immediately after a Workflow has been initiated. What actually
+                            happens after intiating a workflow depends on the Workflow&apos;s plan, but in some cases
+                            there would be no indication to the current user that anything has happened. This page gives
+                            some indication. It is also possible that the current user, the Case Principal, will have a
+                            Wizard to complete. In this case the Wizard will present after this page.
                         </textual>
                     </text>
                 </cell>
@@ -1280,6 +1392,27 @@
             <link type="page" page="reference.html#table" v="v1">
                 <text v="v1">
                     <textual>Table</textual>
+                </text>
+            </link>
+        </list-item>
+        <list-item>
+            <link type="page" page="reference.html#template" v="v1">
+                <text v="v1">
+                    <textual>Template</textual>
+                </text>
+            </link>
+        </list-item>
+        <list-item>
+            <link type="page" page="reference.html#template-panel" v="v1">
+                <text v="v1">
+                    <textual>Template Panel</textual>
+                </text>
+            </link>
+        </list-item>
+        <list-item>
+            <link type="page" page="reference.html#template-target" v="v1">
+                <text v="v1">
+                    <textual>Template Target</textual>
                 </text>
             </link>
         </list-item>
