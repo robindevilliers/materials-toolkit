@@ -2,6 +2,10 @@
 .card-widget {
   margin: 4px;
 
+  &:has(> img) {
+    width: min-content;
+  }
+
   .card-header {
     background: $headerBackground;
     font-family: $font-title-secondary;

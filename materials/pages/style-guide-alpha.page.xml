@@ -133,7 +133,7 @@
                     </accordion-item>
                 </accordion>
             </div>
-            <card flexBasis="300px" flexShrink="0" margin="0em 0em 0em 1em" v="v1">
+            <card flexShrink="0" margin="0em 0em 0em 1em" v="v1">
                 <image src="suzi.jpeg" alt="Image of Suzi" title="Suzi Profile Picture" height="200px" width="300px"
                     v="v1"/>
                 <card-header orientation="COLUMN">
