@@ -254,7 +254,12 @@ class Carousel {
         if (this._config.pause === 'hover') {
             $(this._element)
             .on(EVENT_MOUSEENTER, event => this.pause(event))
-            .on(EVENT_MOUSELEAVE, event => this.cycle(event))
+            .on(EVENT_MOUSELEAVE, event => {
+                // we only resume cycling if the carousel was configured to cycle (data-ride="carousel") in the first place.
+                if (this._config.ride) {
+                    this.cycle(event)
+                }
+            })
         }
 
         if (this._config.touch) {
