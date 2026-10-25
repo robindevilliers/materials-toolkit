@@ -2,7 +2,7 @@ import $ from "jquery";
 
 import "bootstrap/js/dist/util.js";
 import "bootstrap/js/dist/modal.js";
-import "bootstrap/js/dist/carousel.js";
+import "./carousel.js";
 import "bootstrap/js/dist/alert.js";
 import "bootstrap/js/dist/tooltip.js";
 import "bootstrap/js/dist/toast.js";
