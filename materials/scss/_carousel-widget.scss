@@ -2,6 +2,15 @@
 .carousel-widget {
   overflow: hidden;
   margin: 4px;
+  min-height: 4em;
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
 
   .carousel-caption {
     top: 0;
