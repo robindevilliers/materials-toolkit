@@ -1,7 +1,7 @@
 <?schema version="2"?>
 <page id="style-guide-main" version="1" active="false" released="false" group="public" title="Style Guide Main"
     description="Style Guide Main Page" defnVersion="v1" orientation="COLUMN">
-    <jumbotron orientation="COLUMN" v="v1">
+    <jumbotron backgroundFlavour="PRIMARY" orientation="COLUMN" v="v1">
         <div orientation="ROW" v="v1">
             <image src="logo.svg" title="Logo" height="210px" width="210px" borderRadius="1em" padding="1em"
                 border="1px solid black" margin="0em 2em 1em" v="v1" background="white"/>

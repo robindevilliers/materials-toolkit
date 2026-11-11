@@ -1,7 +1,7 @@
 <?schema version="2"?>
 <page defnVersion="v1" id="intro" title="Workflow Executed" orientation="COLUMN">
 
-    <jumbotron v="v1" orientation="COLUMN">
+    <jumbotron backgroundFlavour="PRIMARY" orientation="COLUMN" v="v1">
         <title size="LARGE" v="v1">
             <textual fontFlavour="WHITE">Workflow Executed</textual>
         </title>
